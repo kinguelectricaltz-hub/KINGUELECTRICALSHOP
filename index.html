@@ -1,920 +1,3503 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ================= BASIC META ================= -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Kingu Electrical Shop | Genuine Electrical Products Tanzania</title>
-    <meta name="description" content="Shop genuine DSE controllers, Schneider electric, Yanmar & Perkins spares, cables, lighting, and generators. Free delivery Dar es Salaam & Arusha. Call +255 682 843 552">
-    <!-- PWA Configuration -->
-    <link rel="manifest" href="/shop-manifest.json">
-    <meta name="theme-color" content="#1a5632">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Kingu Shop">
-    <link rel="apple-touch-icon" href="/assets/icons/company-logo.png">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kingueletrical.com/Kinguelectrical-shop.html">
-    <meta property="og:title" content="Kingu Electrical Shop | Electrical Products">
-    <meta property="og:description" content="Browse and order electrical products directly from Kingu Electrical">
-    <meta property="og:image" content="https://kingueletrical.com/assets/icons/company-logo.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://kingueletrical.com/Kinguelectrical-shop.html">
-    <meta property="twitter:title" content="Kingu Electrical Shop | Electrical Products">
-    <meta property="twitter:description" content="Browse and order electrical products directly from Kingu Electrical">
-    <meta property="twitter:image" content="https://kingueletrical.com/assets/icons/company-logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+
+    <title>Kingu Electrical Company Limited | Electrical & Generator Experts in Tanzania</title>
+
+    <meta name="description"
+          content="Kingu Electrical Company Limited provides professional electrical engineering, generator installation, PLC automation, ATS systems, and industrial electrical services across Tanzania.">
+
+    <meta name="keywords"
+          content="Electrical Company Tanzania, Generator Installation Tanzania, Electrical Engineers Dar es Salaam, PLC Programming Tanzania, ATS Systems, Kingu Electrical">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- ================= LOCAL SEO (TANZANIA) ================= -->
+    <meta name="geo.region" content="TZ">
+    <meta name="geo.placename" content="Tanzania">
+    <meta name="ICBM" content="-6.7924,39.2083">
+
+    <!-- ================= OPEN GRAPH ================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingu Electrical Company Limited">
+    <meta property="og:url" content="https://kingueletrical.com/">
+    <meta property="og:title" content="Kingu Electrical Company Limited | Electrical Experts Tanzania">
+    <meta property="og:description"
+          content="Trusted electrical engineering and generator experts serving Tanzania.">
+   <meta property="og:image" content="https://kingueletrical.com/assets/icons/company-logo.png">
+
+    <!-- ================= TWITTER ================= -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kingu Electrical Company Limited">
+    <meta name="twitter:description"
+          content="Professional Electrical and Generator services across Tanzania.">
+   
+
+    <!-- ================= CANONICAL ================= -->
+    <link rel="canonical" href="https://kingueletrical.com/">
+
+    <!-- ================= FAVICONS ================= -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- ================= GOOGLE FONTS (OPTIMIZED) ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+          rel="stylesheet">
+
+    <!-- ================= ICONS ================= -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha512-..."
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+    <!-- ================= STRUCTURED DATA (LOCAL BUSINESS) ================= -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ElectricalContractor",
+  "name": "Kingu Electrical Company Limited",
+  "url": "https://kingueletrical.com/",
+  "logo": "https://kingueletrical.com/assets/icons/company-logo.png",
+  "image": "https://kingueletrical.com/assets/icons/company-logo.png",
+  "telephone": "+255682843552",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dar es Salaam",
+    "addressCountry": "TZ"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Tanzania"
+  }
+}
+</script>
+    </script>
+    <!-- ================= PERFORMANCE HINT ================= -->
+    <meta name="theme-color" content="#1a5632">
+    
+    <!-- Google Fonts (Optimized) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Font Awesome Icons (Optimized) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
     <style>
+        /* ===== CRITICAL CSS (Above-the-fold) ===== */
         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: white;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            min-height: 100vh;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* ===== LOADING ANIMATION (20s total) ===== */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('Background.jpg');
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 1.5s ease-out;
+            overflow: hidden;
+        }
+        
+        .loading-welcome {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-image: url('Background.jpg');
+            opacity: 1;
+            transition: opacity 1s ease;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .loading-welcome::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('Background.jpg');
+            animation: moveBackground 20s linear infinite;
+        }
+        
+        .welcome-logo {
+            width: 200px; 
+            height: auto;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: logoFloatIn 2s ease-out 0.5s forwards;
+            filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+            z-index: 2;
+        }
+        
+        .welcome-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out 1s forwards;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            line-height: 1.2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            z-index: 2;
+            width: 100%;
+            padding: 0 1rem;
+        }
+        
+        .welcome-tagline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            color: #ffffff;
+            text-align: center;
+            max-width: 100%;
+            margin: 0 auto 2rem;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out 1.5s forwards;
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.4;
+            padding: 0 1rem;
+            z-index: 2;
+        }
+        
+        .loading-progress-container {
+            width: 90%;
+            max-width: 300px;
+            margin-top: 1.5rem;
+            z-index: 2;
+        }
+        
+        .loading-progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .loading-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffffff, #ffffff, #ffffff);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+        
+        .loading-progress-text {
+            text-align: center;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            margin-top: 0.75rem;
+            opacity: 0.8;
+            min-height: 1.5em;
+            padding: 0 0.5rem;
+        }
+        
+        .loading-stats {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+            max-width: 280px;
+            opacity: 0;
+            animation: fadeIn 2s ease-out 2s forwards;
+            z-index: 2;
+            width: 90%;
+        }
+        
+        .loading-stat {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .loading-stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 0.25rem;
+        }
+        
+        .loading-stat-label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Loading animations */
+        @keyframes logoFloatIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes moveBackground {
+            from { transform: translateY(0); }
+            to { transform: translateY(100px); }
+        }
+        
+        /* Hide content during loading */
+        body.loading > *:not(#loading-screen) {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        /* ===== MAIN STYLES ===== */
+        /* Background image */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('Background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            opacity: 0.9;
+            z-index: -1;
+            filter: brightness(1.1);
+        }
+        
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding: 0 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        body:not(.loading) nav {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            height: 70px;
+        }
+        
+        .nav-logo {
+            color: white;
+            font-weight: 700;
+            font-size: 1.3rem;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-logo-icon {
+            width: 25px;
+            height: 25px;
+            fill: #ffffff;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        
+        .hamburger-line {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+        
+        .hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+        
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0.25rem;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-menu > li {
+            position: relative;
+        }
+        
+        .nav-menu > li > a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            white-space: nowrap;
+            font-size: 0.95rem;
+            display: block;
+        }
+        
+        .nav-menu > li > a:hover,
+        .nav-menu > li > a:focus {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        /* Dropdown Navigation */
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .dropdown-toggle::after {
+            content: '▾';
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-dropdown:hover .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.98);
+            min-width: 220px;
+            border-radius: 8px;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .nav-dropdown:hover .dropdown-menu,
+        .nav-dropdown:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            display: block;
+            width: 100%;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            white-space: nowrap;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-menu a:hover {
+            background: rgba(255,255,255,0.1);
+            padding-left: 2rem;
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            padding: 120px 15px 60px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        body:not(.loading) header {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            line-height: 1.2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            width: 100%;
+        }
+        
+        .header-icon-img {
+            width: 30px;
+            height: 120px;
+            margin: 0px 0;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+       .company-logo-img {
+    height: 150px; /* Adjust as needed */
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px; /* Space between logo and text */
+       }
+
+/* Add these styles for the h1 */
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 5px; /* Adds consistent spacing between text elements */
+}
+
+/* If you want the text to be on a single line on desktop */
+h1 span {
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    font-weight: 300;
+    color: #ffffff;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    padding: 0 15px;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.contact-header a {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 350px;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.contact-header a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border-color: #ffffff;
+}
+        /* Main content sections */
+        section {
+            padding: 60px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            width: 100%;
+        }
+        
+        body:not(.loading) section {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            width: 100%;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #ffffff, #ffffff, #ffffff);
+            border-radius: 2px;
+        }
+        
+        /* ===== UI/UX IMPROVEMENTS ===== */
+        /* Promo Banner */
+        .promo-banner {
+            background: linear-gradient(135deg, rgba(26, 86, 50, 0.95), rgba(13, 61, 33, 0.95));
+            color: white;
+            padding: 1.2rem 0;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        body:not(.loading) .promo-banner {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .promo-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .promo-badge {
+            background: #dc3545;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+        
+        .promo-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .promo-content p {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            padding: 0 10px;
+        }
+        
+        .promo-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #000;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Kingu Shop CTA */
+        .kingu-shop-cta {
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.95), rgba(200, 35, 51, 0.95));
+            color: white;
+            padding: 1.5rem 15px;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        body:not(.loading) .kingu-shop-cta {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .shop-cta-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .shop-cta-content p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            padding: 0 10px;
+        }
+        
+        .btn-kingu-shop {
+            display: inline-block;
+            background: #ffffff;
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 2px solid #ffffff;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-kingu-shop:hover {
+            background: transparent;
+            color: #ffffff;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem 15px;
+            margin: 2rem 0;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 100%;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Grid layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .card {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .service-item {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Team Section Styles */
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        
+        .team-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        
+        .team-title {
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .team-skills {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Packages Section */
+        .package-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .package-item {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            width: 100%;
+        }
+        
+        .package-item.popular {
+            border: 2px solid #ffffff;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffffff;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 1rem 0;
+        }
+        
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .product-item {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        
+        .product-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .project-item {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .project-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        
+        /* Resources Section */
+        .resources-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 0;
+            width: 100%;
+            max-width: 1200px;
+            overflow-x: visible;
+        }
+        
+        .resource-item {
+            width: 100%;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        
+        /* Certificates Section */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .certificate-item {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        
+        /* Service Area */
+        .service-area-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 2rem;
+            width: 100%;
+        }
+        
+        .service-list ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            padding: 0;
+        }
+        
+        .service-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+        
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        
+        /* Videos section */
+        .video-container {
+            max-width: 100%;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Kingu Shop Section */
+        .kingu-shop-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 2px solid #ffffff;
+            backdrop-filter: blur(10px);
+            width: 100%;
+        }
+        
+        .kingu-shop-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .kingu-shop-section p {
+            margin-bottom: 1rem;
+        }
+        
+        .kingu-shop-section .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+        
+        .kingu-shop-section a {
+            background: #ffffff;
+            color: #000;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        
+        /* Form Improvements */
+        .booking-widget {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 100%;
+        }
+        
+        .booking-widget h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 1.25rem;
+            position: relative;
+            width: 100%;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .form-error {
+            color: #ff6b6b;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            min-height: 1.25rem;
+            opacity: 0;
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .form-error.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .form-success {
+            background: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+            display: none;
+            border: 1px solid rgba(40, 167, 69, 0.3);
+        }
+        
+        .form-success.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        input, textarea, select {
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-family: 'Roboto', sans-serif;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+            min-height: 50px;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: 3px solid rgba(255, 255, 255, 0.5);
+            outline-offset: 2px;
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        button, .btn {
+            background: #ffffff;
+            color: #000;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            width: 100%;
+            min-height: 50px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        button:hover, .btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+        }
+        
+        button[disabled] {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+            margin-right: 8px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* WhatsApp Widget */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            z-index: 9998;
+        }
+        
+        .whatsapp-toggle {
+            width: 55px;
+            height: 55px;
+            background: #25D366;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .whatsapp-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-toggle[aria-expanded="true"] {
+            transform: rotate(360deg);
+            background: #128C7E;
+        }
+        
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #dc3545;
+            color: white;
+            font-size: 0.7rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Chat Window */
+        .whatsapp-chat {
+            position: absolute;
+            bottom: 65px;
+            right: 0;
+            width: calc(100vw - 30px);
+            max-width: 320px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-chat[aria-hidden="false"] {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            visibility: visible;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 85px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid white;
+            border-radius: 50%;
+            color: #000;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 998;
+            backdrop-filter: blur(10px);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .back-to-top:hover {
+            background: #ffffff;
+            transform: translateY(-5px);
+        }
+        
+        /* Emergency CTA */
+        .emergency-cta {
+            background: rgba(220, 53, 69, 0.2);
+            padding: 2rem 15px;
+            text-align: center;
+            margin: 2rem 0;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(220, 53, 69, 0.3);
+            width: 100%;
+        }
+        
+        .emergency-cta h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        
+        .emergency-cta p {
+            margin-bottom: 1rem;
+        }
+        
+        .emergency-btn {
+            display: inline-block;
+            background: #dc3545;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .emergency-btn:hover {
+            background: #c82333;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 3rem 15px 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            width: 100%;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column {
+            text-align: center;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .footer-column p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .footer-column a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: #1a5632;
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 1.5rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* ===== TABLET & DESKTOP STYLES ===== */
+        @media (min-width: 768px) {
+            html {
+                font-size: 17px;
+            }
+            
+            .welcome-title {
+                font-size: 2.5rem;
+                flex-direction: row;
+                gap: 8px;
+            }
+            
+            .welcome-tagline {
+                font-size: 1.4rem;
+            }
+            
+            .loading-stats {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 600px;
+            }
+            
+            h1 {
+                font-size: 3.5rem;
+                flex-direction: row;
+                gap: 10px;
+            }
+            
+            .header-icon-img {
+                width: 30px;
+                height: 120px;
+            }
+            
+            .tagline {
+                font-size: 1.8rem;
+                max-width: 800px;
+            }
+            
+            .contact-header {
+                flex-direction: row;
+                flex-wrap: wrap;
+                max-width: 900px;
+            }
+            
+            .contact-header a {
+                min-width: 280px;
+                max-width: calc(50% - 0.5rem);
+            }
+            
+            h2 {
+                font-size: 2.8rem;
+            }
+            
+            .grid,
+            .services-grid,
+            .team-grid,
+            .package-grid,
+            .products-grid,
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .service-area-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+                text-align: left;
+            }
+            
+            .footer-column {
+                text-align: left;
+            }
+            
+            .resources-grid {
+                flex-direction: row;
+                overflow-x: auto;
+            }
+            
+            .resource-item {
+                min-width: 300px;
+            }
+            
+            .certificates-grid {
+                grid-template-columns: repeat(2, 2fr);
+            }
+            
+            section {
+                padding: 100px 20px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .grid,
+            .services-grid,
+            .team-grid,
+            .package-grid,
+            .products-grid,
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .certificates-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .nav-menu {
+                gap: 0.5rem;
+            }
+        }
+        
+        /* Mobile Dropdown */
+        @media (max-width: 1024px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(0, 0, 0, 0.98);
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+                transition: left 0.3s ease;
+                z-index: 999;
+                backdrop-filter: blur(20px);
+                overflow-y: auto;
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu > li {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .nav-menu > li > a {
+                padding: 1.25rem;
+                font-size: 1.1rem;
+                border-radius: 0;
+                width: 100%;
+            }
+            
+            .nav-dropdown {
+                width: 100%;
+            }
+            
+            .dropdown-toggle {
+                justify-content: center;
+                gap: 8px;
+                width: 100%;
+            }
+            
+            .dropdown-toggle::after {
+                margin-left: 5px;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                background: rgba(0,0,0,0.3);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                margin: 0;
+                padding: 0;
+                border: none;
+                border-radius: 0;
+                width: 100%;
+                box-shadow: none;
+                min-width: auto;
+            }
+            
+            .nav-dropdown.active .dropdown-menu {
+                max-height: 500px;
+                padding: 0.5rem 0;
+            }
+            
+            .dropdown-menu a {
+                padding-left: 3rem;
+                font-size: 1em;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+                text-align: left;
+            }
+            
+            .dropdown-menu a:hover {
+                padding-left: 3.5rem;
+            }
+        }
+        
+        /* Small mobile */
+        @media (max-width: 480px) {
+            html {
+                font-size: 15px;
+            }
+            
+            .welcome-title {
+                font-size: 1.8rem;
+            }
+            
+            .welcome-tagline {
+                font-size: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-icon-img {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-header a {
+                font-size: 0.9rem;
+                padding: 0.8rem;
+            }
+            
+            .service-list li {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Fix for iOS Safari viewport */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                min-height: -webkit-fill-available;
+            }
+            
+            #loading-screen {
+                min-height: -webkit-fill-available;
+            }
+            
+            header {
+                min-height: -webkit-fill-available;
+            }
+        }
+        
+        /* Better touch targets for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            button,
+            .btn,
+            a[href],
+            input,
+            select,
+            textarea {
+                min-height: 44px;
+            }
+            
+            .nav-menu > li > a {
+                padding: 1.25rem;
+            }
+            
+            .contact-header a {
+                min-height: 60px;
+            }
+        }
+    </style>
+</head>
+<body class="loading">
+    <!-- Loading Animation (20 seconds total) -->
+  <div id="loading-screen">
+    <div class="loading-welcome" id="welcomePage">
+        <img src="assets/icons/company-logo.png" alt="Kingu Electrical Company Limited" class="welcome-logo">
+        <h1 class="welcome-title">
+            <span style="color: #1a5632">Kingu</span>
+            <span style="color: #cc0000">Electrical</span> 
+            <span style="color: #1a5632">Company Limited</span>
+        </h1>
+      <p class="welcome-tagline" style="color: #cc0000; font-weight: bold;">
+    Engineering reliable power solutions for Tanzania since 2017
+</p> 
+        
+        <div class="loading-stats">
+            <div class="loading-stat">
+                <div class="loading-stat-number">50+</div>
+                <div class="loading-stat-label">Projects</div>
+            </div>
+            <div class="loading-stat">
+                <div class="loading-stat-number">10+</div>
+                <div class="loading-stat-label">Years Experience</div>
+            </div>
+            <div class="loading-stat">
+                <div class="loading-stat-number">24/7</div>
+                <div class="loading-stat-label">Support</div>
+            </div>
+        </div>
+        
+        <div class="loading-progress-container">
+            <div class="loading-progress-bar">
+                <div class="loading-progress-fill" id="loading-progress"></div>
+            </div>
+            <div class="loading-progress-text" id="progressText">Initializing system...</div>
+        </div>
+    </div>
+</div>
+       
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        <div class="promo-content">
+            <span class="promo-badge">LIMITED TIME OFFER</span>
+            <h3>⚡ Get 15% Off Your First Generator Service!</h3>
+            <p>Book your first generator maintenance before May 31, 2026 • Use code: <strong>KINGUPOWER15</strong></p>
+            <a href="tel:+255682843552" class="promo-btn">📞 Call Now to Claim</a>
+        </div>
+    </div>
+
+    <!-- Kingu Electrical Shop CTA -->
+    <div class="kingu-shop-cta">
+        <div class="shop-cta-content">
+            <h3>🛒 Visit Our Online Electrical Shop</h3>
+            <p>Browse 100+ Electrical products, Generators, solar systems, and spare parts with fast delivery across Tanzania!</p>
+            <a href="/Kinguelectrical-shop.html" class="btn-kingu-shop" target="_blank">
+                <i class="fas fa-shopping-cart"></i> Open Kingu Electrical Shop
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+    <img src="assets/icons/company-logo.png" alt="Kingu Electrical" height="80">
+    <span class="logo-text"><span style="color: #1a5632">Kingu</span>
+            <span style="color: #cc0000">Electrical</span> 
+            <span style="color: #1a5632">Company Limited</span>
+</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#services" class="dropdown-toggle">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#services">Generator Services</a></li>
+                        <li><a href="#services">Solar Systems</a></li>
+                        <li><a href="#services">PLC & Automation</a></li>
+                        <li><a href="#services">ATS Systems</a></li>
+                        <li><a href="#services">Electrical Installations</a></li>
+                    </ul>
+                </li>
+                <li><a href="#team" class="nav-link">Our Team</a></li>
+                <li><a href="#packages" class="nav-link">Packages</a></li>
+                <li class="nav-dropdown">
+                    <a href="#about" class="dropdown-toggle">Company</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#certificates">Certificates</a></li>
+                    </ul>
+                </li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Header -->
+   <header id="home">
+    <div class="content-wrapper">
+        <h1 class="floating-title">
+            <img src="./assets/icons/company-logo.png" class="company-logo-img floating-logo" alt="Company Logo">
+            <span style="color:#1a5632;font-weight: bold;">Kingu</span>
+            <span style="color:#dc3545;font-weight: bold;">Electrical</span>
+            <span style="color:#1a5632;font-weight: bold;">Company Limited</span>
+        </h1>
+        
+        <p class="tagline floating-tagline" style="color: #DC3545; font-weight: bold; font-style: italic;">
+            Quality Electrical Services with Professional Experience
+        </p>
+        
+        <div class="contact-header floating-contact-grid">
+            <a href="mailto:Kinguelectricaltz@gmail.com" class="floating-contact">
+                <i class="fas fa-envelope"></i> Kinguelectricaltz@gmail.com
+            </a>
+            <a href="tel:+255677014740" class="floating-contact">
+                <i class="fas fa-phone"></i> +255 672 912 802
+            </a>
+            <a href="tel:+255763957908" class="floating-contact">
+                <i class="fas fa-phone"></i> +255 763 957 908
+            </a>
+            <a href="tel:+255682843552" class="floating-contact">
+                <i class="fas fa-phone"></i> +255 682 843 552
+            </a>
+        </div>
+    </div>
+</header>
+
+<style>
+/* Your original styles with floating animation */
+#home {
+    background: url('Background.jpg') center/cover no-repeat fixed;
+    min-height: 100vh;
+    position: relative;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Company name */
+.floating-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.company-logo-img {
+    width: 120px;
+    height: 120px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+/* Tagline - keeps your original red color */
+.floating-tagline {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    max-width: 600px;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Contact section - 4 invisible columns */
+.floating-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Contact links - keeps your original style */
+.floating-contact {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+
+/* Keep original icon colors */
+.floating-contact i {
+    font-size: 1.2rem;
+}
+
+.floating-contact:first-child i {
+    color: #dc3545; /* Red for email */
+}
+
+.floating-contact:not(:first-child) i {
+    color: #1a5632; /* Green for phones */
+}
+
+/* Add brand color borders on hover */
+.floating-contact:first-child:hover {
+    border-color: #dc3545;
+    background: white;
+}
+
+.floating-contact:not(:first-child):hover {
+    border-color: #1a5632;
+    background: white;
+}
+
+/* FLOATING ANIMATIONS ONLY */
+.floating-title span {
+    display: inline-block;
+    animation: floatWord 3s ease-in-out infinite;
+}
+
+.floating-title span:nth-child(1) { animation-delay: 0s; } /* Kingu */
+.floating-title span:nth-child(2) { animation-delay: 0.5s; } /* Electrical */
+.floating-title span:nth-child(3) { animation-delay: 1s; } /* Company Limited */
+
+.floating-logo {
+    animation: floatLogo 4s ease-in-out infinite;
+}
+
+.floating-tagline {
+    animation: floatTagline 5s ease-in-out infinite;
+}
+
+.floating-contact {
+    animation: floatContact 6s ease-in-out infinite;
+}
+
+.floating-contact:nth-child(1) { animation-delay: 0.2s; }
+.floating-contact:nth-child(2) { animation-delay: 0.3s; }
+.floating-contact:nth-child(3) { animation-delay: 0.4s; }
+.floating-contact:nth-child(4) { animation-delay: 0.5s; }
+
+/* Floating animations - very subtle */
+@keyframes floatWord {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes floatLogo {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(2deg);
+    }
+}
+
+@keyframes floatTagline {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes floatContact {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .floating-contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .floating-title {
+        font-size: 1.8rem;
+    }
+    
+    .company-logo-img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-contact-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+    
+    .floating-title {
+        font-size: 1.5rem;
+    }
+    
+    .floating-tagline {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+</style>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Stats Section -->
+        <div class="content-wrapper">
+            <h2>Trusted Electrical Experts in Tanzania</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">50+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="10">10+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support & Maintenance</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.stat-number[data-count]');
+        let animationStarted = false;
+        
+        function animateCounter(element, target) {
+            const plusSign = element.textContent.includes('+') ? '+' : '';
+            let current = 0;
+            const duration = 1800;
+            const increment = target / (duration / 16);
+            
+            element.textContent = '0' + plusSign;
+            
+            function update() {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.floor(current) + plusSign;
+                    requestAnimationFrame(update);
+                } else {
+                    element.textContent = target + plusSign;
+                }
+            }
+            requestAnimationFrame(update);
+        }
+        
+        function startAnimation() {
+            if (animationStarted) return;
+            animationStarted = true;
+            
+            counters.forEach((counter, index) => {
+                setTimeout(() => {
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    animateCounter(counter, target);
+                }, index * 400);
+            });
+        }
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startAnimation();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.4 });
+        
+        const statsSection = document.getElementById('stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+        
+        // Fallback: start after 2.5 seconds if not triggered by scroll
+        setTimeout(() => {
+            if (!animationStarted) {
+                startAnimation();
+            }
+        }, 2500);
+          * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: #f9fafb;
-            color: #1f2937;
+            font-family: system-ui, 'Segoe UI', 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background: #f4f7fc;
             line-height: 1.5;
         }
 
-        :root {
-            --green-dark: #15803d;
-            --green: #16a34a;
-            --green-light: #86efac;
-            --red-dark: #b91c1c;
-            --red: #dc2626;
-            --red-light: #fecaca;
-            --white: #ffffff;
-            --gray-bg: #f9fafb;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
+        /* certificates section styling */
+        #certificates {
+            padding: 4rem 1.5rem;
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border-top: 1px solid #e2edf2;
+            border-bottom: 1px solid #e2edf2;
         }
 
-        .top-bar {
-            background: var(--green-dark);
-            color: white;
-            padding: 10px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            font-size: 14px;
+        .content-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
         }
 
-        .top-bar a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .top-bar a:hover {
-            text-decoration: underline;
-        }
-
-        .main-header {
-            background: var(--white);
-            padding: 16px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-        }
-        
-        .nav-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            gap: 12px;
-        }
-        
-        .logo-text {
-            font-size: 1.2rem;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-        
-        .header-right {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-call {
-            background: var(--red);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.2s;
-        }
-
-        .btn-call:hover {
-            background: var(--red-dark);
-            transform: scale(1.02);
-        }
-
-        .btn-quote {
-            background: var(--green);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 40px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .btn-quote:hover {
-            background: var(--green-dark);
-        }
-
-        .back-to-main {
-            background: transparent;
-            border: 1px solid var(--green);
-            color: var(--green-dark);
-            padding: 8px 16px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .back-to-main:hover {
-            background: var(--green);
-            color: white;
-        }
-
-        .filter-bar {
-            background: var(--white);
-            padding: 16px 24px;
-            border-bottom: 1px solid #e5e7eb;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .search-box {
-            flex: 1;
-            min-width: 200px;
-            display: flex;
-            gap: 8px;
-        }
-
-        .search-box input {
-            flex: 1;
-            padding: 12px 16px;
-            border: 1px solid #d1d5db;
-            border-radius: 40px;
-            font-size: 1rem;
-            outline: none;
-        }
-
-        .search-box input:focus {
-            border-color: var(--green);
-            box-shadow: 0 0 0 2px rgba(22,163,74,0.2);
-        }
-
-        .search-box button {
-            background: var(--green);
-            border: none;
-            padding: 0 20px;
-            border-radius: 40px;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .category-filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .filter-chip {
-            background: #e5e7eb;
-            padding: 8px 16px;
-            border-radius: 40px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: none;
-            transition: all 0.2s;
-        }
-
-        .filter-chip.active {
-            background: var(--green-dark);
-            color: white;
-        }
-
-        .stats-banner {
-            background: linear-gradient(135deg, var(--green-dark), var(--green));
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 20px 24px;
-            text-align: center;
-            gap: 20px;
-        }
-
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .stat-number {
-            font-size: 1.8rem;
+        #certificates h2 {
+            font-size: 2.3rem;
             font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+            background: linear-gradient(135deg, #1E3C2C, #2A6B47);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
 
-        .products-section {
-            padding: 32px 24px;
+        /* subtle underline effect */
+        #certificates h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #2A6B47;
+            margin: 0.8rem auto 0;
+            border-radius: 4px;
+            opacity: 0.6;
         }
 
-        .section-title {
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-        }
-
-        .product-count {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        .products-grid {
+        .certificates-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .product-card {
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
+        .certificate-item {
+            background: white;
+            border-radius: 1.75rem;
+            padding: 1.8rem 1.5rem 1.8rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+            box-shadow: 0 12px 26px -8px rgba(0, 32, 16, 0.08);
+            border: 1px solid #eef3f0;
+            backdrop-filter: blur(0px);
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
-        .product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        .certificate-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 36px -12px rgba(26, 67, 43, 0.2);
+            border-color: #cbe5d4;
         }
 
-        .product-image {
-            width: 100%;
-            height: 180px;
-            background: #f9fafb;
+        /* certificate image / picture wrapper */
+        .cert-img {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 1.2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 16px;
-            border-bottom: 1px solid #eef2ff;
+            background: #f0f6f2;
+            border-radius: 50%;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
         }
 
-        .product-image img {
-            max-width: 100%;
-            max-height: 100%;
+        .cert-img img {
+            width: 56px;
+            height: 56px;
             object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
         }
 
-        .product-info {
-            padding: 16px;
-            flex: 1;
-        }
-
-        .product-category {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--green);
+        .certificate-item h4 {
+            font-size: 1.4rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin: 0.5rem 0 0.75rem 0;
+            color: #1a2e24;
+            letter-spacing: -0.2px;
         }
 
-        .product-title {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            line-height: 1.4;
+        .certificate-item p {
+            color: #2c4b3a;
+            font-size: 0.95rem;
+            margin: 0.25rem 0;
+            line-height: 1.5;
         }
 
-        .product-description {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-bottom: 12px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .product-price {
-            font-size: 1.25rem;
+        .certificate-item strong {
             font-weight: 700;
-            color: var(--red-dark);
-            margin-bottom: 12px;
+            color: #0e3b28;
         }
 
-        .product-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: auto;
-            padding: 12px 16px;
-            border-top: 1px solid #eef2ff;
-        }
-
-        .btn-add {
-            flex: 1;
-            background: var(--green);
-            color: white;
-            border: none;
-            padding: 8px;
-            border-radius: 40px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .btn-add:hover {
-            background: var(--green-dark);
-        }
-
-        .btn-inquire {
-            background: transparent;
-            border: 1px solid var(--red);
-            color: var(--red-dark);
-            padding: 8px;
-            border-radius: 40px;
-            cursor: pointer;
-        }
-
-        .inquiry-sidebar {
-            position: fixed;
-            right: -400px;
-            top: 0;
-            width: 380px;
-            height: 100vh;
-            background: var(--white);
-            box-shadow: -4px 0 20px rgba(0,0,0,0.1);
-            z-index: 1000;
-            transition: right 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .inquiry-sidebar.open {
-            right: 0;
-        }
-
-        .inquiry-header {
-            background: var(--green-dark);
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .inquiry-items {
-            flex: 1;
-            overflow-y: auto;
-            padding: 16px;
-        }
-
-        .inquiry-footer {
-            padding: 16px;
-            border-top: 1px solid #e5e7eb;
-        }
-
-        .inquiry-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid #eef2ff;
-        }
-
-        .btn-submit-inquiry {
-            background: var(--red);
-            color: white;
+        .cert-detail {
+            font-size: 0.9rem;
+            background: #f9fdfa;
+            padding: 0.5rem 0.75rem;
+            border-radius: 2rem;
+            margin-top: 1rem;
             width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 40px;
-            font-weight: 600;
-            cursor: pointer;
+            border: 1px solid #e2f0e6;
+            color: #1c4d36;
         }
 
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 999;
-            display: none;
+        .badge-new {
+            background: #eef4e9;
+            font-size: 0.7rem;
+            font-weight: 500;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 0.6rem;
+            color: #2a6b47;
         }
 
-        .overlay.active {
-            display: block;
+        /* responsive */
+        @media (max-width: 640px) {
+            #certificates {
+                padding: 3rem 1rem;
+            }
+            .certificates-grid {
+                gap: 1.3rem;
+            }
+            .certificate-item {
+                padding: 1.4rem 1rem;
+            }
+            .cert-img {
+                width: 74px;
+                height: 74px;
+            }
+            .cert-img img {
+                width: 46px;
+                height: 46px;
+            }
+            #certificates h2 {
+                font-size: 1.9rem;
+            }
         }
 
-        footer {
-            background: var(--green-dark);
-            color: #d1fae5;
-            padding: 32px 24px;
+        /* small decorative */
+        .content-wrapper > p:first-of-type {
             text-align: center;
-            margin-top: 40px;
+            color: #4f6f5e;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
         }
+     });
+    </script>
 
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
+        <!-- About Section -->
+        <section id="about">
+            <div class="content-wrapper">
+                <h2>About Us</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Our Story</h3>
+                        <p>Founded in 2017 by highly Experienced Electrical Engineers, Kingu Electrical Company Limited has grown to become a leading Electrical Engineering and Product trading company in Tanzania, serving clients across East Africa with headquarters in Arusha and Dar-es-salaam.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Our Mission</h3>
+                        <p>To deliver Exceptional Electrical Engineering Solutions that exceed client expectations while Maintaining the highest standards of safety, quality, and professionalism in all our projects.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Our Values</h3>
+                        <p>Integrity, Quality, Teamwork, and Innovation guide every project we undertake and every relationship we build with our clients across Tanzania.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+        <!-- Team Section -->
+        <section id="team">
+            <div class="content-wrapper">
+                <h2>Meet Our Expert Team</h2>
+                <div class="team-grid">
+                    <!-- Eng. Kingu Paul - Director -->
+                    <div class="team-member">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold; background: linear-gradient(135deg, #FF6B35, #FF8E53);">KG</div>
+                        <div class="team-name">Eng. Kingu Paul</div>
+                        <div class="team-title">Director & Professional Electrical Engineer</div>
+                        <div style="color: #ffffff; font-size: 0.9rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">⏳ 14+ Years Experience</div>
+                        <p>EWURA Licensed Electrical Engineer with extensive experience in power systems, generator installations, and industrial automation across Tanzania.</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">Power Systems</span>
+                            <span class="skill-tag">Generator Installation</span>
+                            <span class="skill-tag">PLC Programming</span>
+                            <span class="skill-tag">Project Management</span>
+                        </div>
+                    </div>
 
-        .quick-order-form input,
-        .quick-order-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-        }
+                    <!-- Erick Masimba- Electrical Technician -->
+                    <div class="team-member">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold; background: linear-gradient(135deg, #0d6efd, #0b5ed7);">HN</div>
+                        <div class="team-name">Erick Masimba</div>
+                        <div class="team-title">Senior Electrical Technician</div>
+                        <div style="color: #ffffff; font-size: 0.9rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">⏳ 8+ Years Experience</div>
+                        <p>Specialized in electrical installations, maintenance, and troubleshooting of industrial electrical systems and generator setups.</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">Electrical Installations</span>
+                            <span class="skill-tag">Maintenance</span>
+                            <span class="skill-tag">Troubleshooting</span>
+                            <span class="skill-tag">Safety Compliance</span>
+                        </div>
+                    </div>
 
-        .no-results {
-            text-align: center;
-            padding: 60px;
-            color: var(--text-light);
-            grid-column: 1 / -1;
-        }
+                    <!-- Rahel Ayubu - Telecom Engineer -->
+                    <div class="team-member">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold; background: linear-gradient(135deg, #6f42c1, #59359a);">RM</div>
+                        <div class="team-name">Rahel Ayubu</div>
+                        <div class="team-title">Telecom Engineer & Project Administrator</div>
+                        <div style="color: #ffffff; font-size: 0.9rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">⏳ 6+ Years Experience</div>
+                        <p>Expert in telecom infrastructure projects, project coordination, and ensuring seamless communication between technical teams and clients.</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">Telecom Infrastructure</span>
+                            <span class="skill-tag">Project Administration</span>
+                            <span class="skill-tag">Client Coordination</span>
+                            <span class="skill-tag">Documentation</span>
+                        </div>
+                    </div>
 
-        @media (max-width: 768px) {
-            .main-header { flex-direction: column; text-align: center; }
-            .filter-bar { flex-direction: column; }
-            .search-box { width: 100%; }
-            .category-filters { justify-content: center; }
-            .products-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-            .inquiry-sidebar { width: 100%; right: -100%; }
-            .stats-banner { flex-direction: column; align-items: center; }
-            .header-right { justify-content: center; }
-            .logo-text { white-space: normal; text-align: center; }
-        }
-    </style>
-</head>
-<body>
+                    <!-- Bernard Masanja- Mechanical Technician -->
+                    <div class="team-member">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold; background: linear-gradient(135deg, #20c997, #199d76);">BS</div>
+                        <div class="team-name">Bernard MAsanja</div>
+                        <div class="team-title">Mechanical Technician</div>
+                        <div style="color: #ffffff; font-size: 0.9rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">⏳ 7+ Years Experience</div>
+                        <p>Specialized in mechanical aspects of generators, engine maintenance, and mechanical system installations for power solutions.</p>
+                        <div class="team-skills">
+                            <span class="skill-tag">Generator Mechanics</span>
+                            <span class="skill-tag">Engine Maintenance</span>
+                            <span class="skill-tag">Mechanical Systems</span>
+                            <span class="skill-tag">Preventive Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="font-size: 1.1rem; color: #ffffff; font-weight: 500;">
+                        Our team combines <strong>Technical expertise</strong> with <strong>Professional experience</strong> to deliver exceptional electrical solutions across Tanzania.
+                    </p>
+                    <a href="#contact" class="btn" style="margin-top: 1.5rem;">Contact Our Team</a>
+                </div>
+            </div>
+        </section>
 
-<div class="top-bar">
-    <div class="contact-info">
-        <span>📞 <a href="tel:+255682843552">+255 682 843 552</a></span>
-        <span>✉️ kinguelectricaltz@gmail.com</span>
-        <span><a href="https://kingueletrical.com/">← Back to Main Website</a></span>
-    </div>
-    Karibu sana....Order NASI
-</div>
+        <!-- Packages Section -->
+        <section id="packages">
+            <div class="content-wrapper">
+                <h2>Service Packages</h2>
+                <div class="package-grid">
+                    <div class="package-item">
+                        <h3>Basic Generator Service & Maintenance</h3>
+                        <div class="price">From TZS 380,000</div>
+                        <ul style="text-align: left; margin: 1.5rem 0; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Generator service check</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Electrical safety inspection</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Basic troubleshooting</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ 3-month warranty</li>
+                        </ul>
+                        <a href="https://wa.me/255682843552?text=Hello!%20I'm%20interested%20in%20Basic%20Generator%20services%20package" target="_blank" class="btn">Book Now</a>
+                    </div>
+                    
+                    <div class="package-item popular">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <h3>Professional Installation</h3>
+                        <div class="price">From TZS 500,000</div>
+                        <ul style="text-align: left; margin: 1.5rem 0; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Complete Generator installation 6-20kVA</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ ATS system setup</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Free site inspection</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ 1-year warranty</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ 24/7 emergency support</li>
+                        </ul>
+                        <a href="https://wa.me/255682843552?text=Hello!%20I'm%20interested%20in%20Professional%20Installation%20package" target="_blank" class="btn">Get Quote</a>
+                    </div>
+                    <div class="package-item popular">
+    <div class="popular-badge">MOST POPULAR</div>
+    <h3>Power Audit</h3>
+    <div class="price">From TZS 1,500,000</div>
+    <ul style="text-align: left; margin: 1.5rem 0; list-style: none; padding: 0;">
+        <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Full load analysis & consumption report</li>
+        <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Backup power requirement assessment</li>
+        <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Site inspection</li>
+        <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Efficiency recommendations report</li>
+        <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ 30-day follow-up consultation</li>
+    </ul>
+    <a href="https://wa.me/255682843552?text=Hello!%20I'm%20interested%20in%20the%20Power%20Audit%20package" target="_blank" class="btn">Get Quote</a>
+</div>    
+                    <div class="package-item">
+                        <h3>Enterprise Solution</h3>
+                        <div class="price">Custom Pricing</div>
+                        <ul style="text-align: left; margin: 1.5rem 0; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Full Electrical System Design</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ DSE & Intellite PLC programming</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Solar Power System integration</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Annual maintenance contract</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">✓ Priority 24/7 support</li>
+                        </ul>
+                        <a href="#contact" class="btn">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="main-header">
-    <div class="logo-area">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <img src="assets/icons/company-logo.png" alt="Kingu Electrical" style="height: 160px;">
-                <span class="logo-text">
-                    <span style="color: #1a5632">Kingu</span>
-                    <span style="color: #cc0000">Electrical</span>
-                    <span style="color: #1a5632">Shop</span>
-                </span>
+        <!-- Services Section -->
+        <section id="services">
+            <div class="content-wrapper">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-generator"></i></div>
+                        <h3>Generator Services</h3>
+                        <p>Complete Generator solutions including installation, maintenance, service, repair, testing and commissioning of diesel generators up to 1000kVA for reliable backup power.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-solar-panel"></i></div>
+                        <h3>Solar Systems</h3>
+                        <p>Design, installation and Maintenance of solar power systems for Residential, Commercial and Industrial Applications across Tanzania.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Generator Spare Parts</h3>
+                        <p>Supply of Genuine Diesel Generator spare parts and complete Generator systems with professional installation services.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-microchip"></i></div>
+                        <h3>PLC & Automation</h3>
+                        <p>Advanced PLC programming, InteliLite & DSE configuration, and industrial automation solutions for telecom and manufacturing sectors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Widget -->
+        <div class="booking-widget">
+            <div class="content-wrapper">
+                <h3>📅 Book a Free Site Inspection</h3>
+                <form id="bookingForm" novalidate>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Full Name *" required 
+                               aria-label="Your full name">
+                        <div class="form-error" aria-live="polite"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number *" required 
+                               pattern="[0-9+]{10,15}" 
+                               aria-label="Phone number with country code">
+                        <div class="form-error" aria-live="polite"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select required aria-label="Select service type">
+                            <option value="">Select Service *</option>
+                            <option value="generator">Generator Installation</option>
+                            <option value="maintenance">Electrical Maintenance</option>
+                            <option value="plc">PLC Programming</option>
+                            <option value="solar">Solar System</option>
+                            <option value="emergency">Emergency Repair</option>
+                        </select>
+                        <div class="form-error" aria-live="polite"></div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" required 
+                                   aria-label="Preferred date">
+                            <div class="form-error" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="time" required 
+                                   aria-label="Preferred time">
+                            <div class="form-error" aria-live="polite"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea placeholder="Additional Details (Location, specific requirements)" 
+                                  rows="3" aria-label="Additional details"></textarea>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" data-loading-text="Scheduling...">
+                        Schedule Inspection
+                    </button>
+                    
+                    <div class="form-success" id="formSuccess" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <section id="products">
+            <div class="content-wrapper">
+                <h2>Featured Products</h2>
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-icon">⚡</div>
+                        <h3>Diesel Generators</h3>
+                        <p>10kVA - 1000kVA available. Complete installation included.</p>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #ffffff; margin: 1rem 0;">TZS 8.5M - 385M</div>
+                        <a href="https://wa.me/255682843552?text=I'm interested in diesel generators" target="_blank" class="btn">Inquire Now</a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">☀️</div>
+                        <h3>Solar Power Systems</h3>
+                        <p>Complete solar solutions with battery backup</p>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #ffffff; margin: 1rem 0;">TZS 500K - 25M</div>
+                        <a href="https://wa.me/255682843552?text=I'm interested in solar systems" target="_blank" class="btn">Get Quote</a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-icon">🔧</div>
+                        <h3>Genuine Spare Parts</h3>
+                        <p>Original parts with warranty. Next-day delivery available.</p>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #ffffff; margin: 1rem 0;">TZS 50K - 5M</div>
+                        <a href="https://wa.me/255682843552?text=I need generator spare parts" target="_blank" class="btn">Order Parts</a>
+                    </div>
+                </div>
+                
+                <!-- Kingu Electrical Shop Section -->
+                <div class="kingu-shop-section">
+                    <h3>🛒 Browse Our Complete Product Catalog</h3>
+                    <p>We have 100+ Electrical Products available for immediate order</p>
+                    <div class="btn-container">
+                        <a href="#generators" class="btn">View All Generators</a>
+                        <a href="#solar" class="btn">View Solar Systems</a>
+                        <a href="#spares" class="btn">View 100+ Spare Parts</a>
+                    </div>
+                    <p style="color: #ffffff; font-size: 0.9rem; margin-top: 1rem;">
+                        <strong>Instant Support:</strong> Order directly via phone +255 682 843 552
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="content-wrapper">
+                <h2>Projects & Achievements</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🏗️</div>
+                        <h3>Telecom HPU Conversion</h3>
+                        <p>Successfully converted multiple HPU units into standard Diesel Generators for Telecom infrastructure across Tanzania.</p>
+                        <p><strong>Year:</strong> 2019-2025</p>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                        <h3>Industrial Generator Installation</h3>
+                        <p>Complete installation and commissioning of 800kVA diesel generator set with integrated ATS for a major manufacturing facility.</p>
+                        <p><strong>Year:</strong> 2016-2025</p>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">💻</div>
+                        <h3>Data Center Power Distribution</h3>
+                        <p>Design and implementation of 600A dual-bus DC Power Distribution Unit for critical data center infrastructure.</p>
+                        <p><strong>Year:</strong> 2022-2023</p>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">👨‍🏫</div>
+                        <h3>Technical Training Program</h3>
+                        <p>Developed and delivered specialized Generator Technical Training Programs for Multiple Telecom O&M Teams across Tanzania.</p>
+                        <p><strong>Year:</strong> 2017-2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Area -->
+        <section id="service-area">
+            <div class="content-wrapper">
+                <h2>Service Areas in Tanzania</h2>
+                <div class="service-area-content">
+                    <div class="service-list">
+                        <h3>Primary Service Areas:</h3>
+                        <ul>
+                            <li>Dar-es-salaam (All Districts)</li>
+                            <li>Arusha Region</li>
+                            <li>Dodoma</li>
+                            <li>Mwanza</li>
+                            <li>Mbeya</li>
+                            <li>Zanzibar</li>
+                        </ul>
+                        <a href="tel:+255682843552" class="btn">Check If We Cover Your Area</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources">
+            <div class="content-wrapper">
+                <h2>Free Electrical Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-item">
+                        <h3>Generator Maintenance Checklist</h3>
+                        <p>Free PDF guide for proper generator maintenance to extend lifespan and prevent breakdowns.</p>
+                        <a href="https://drive.google.com/drive/folders/1oQ5Nk5mDd-jpA7ZsP4E75XnD2E6h52cj" target="_blank" class="btn">Download Free</a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3>Energy Saving Guide</h3>
+                        <p>Tips to reduce your electricity bill by 30% through efficient electrical system management.</p>
+                        <a href="https://drive.google.com/drive/folders/1oQ5Nk5mDd-jpA7ZsP4E75XnD2E6h52cj" target="_blank" class="btn">Download Free</a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3>Emergency Preparedness Kit</h3>
+                        <p>What every business needs for power emergencies - checklist and preparation guide.</p>
+                        <a href="https://drive.google.com/drive/folders/1oQ5Nk5mDd-jpA7ZsP4E75XnD2E6h52cj" target="_blank" class="btn">Download Free</a>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="tel:+255682843552" style="color: #ffffff; font-weight: bold; text-decoration: none; font-size: 1.1rem;">
+                        📞 Call +255 682 843 552 for Professional Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Certificates Section -->
+          <section id="certificates">
+        <div class="content-wrapper">
+            <h2>Certificates & Compliance</h2>
+            <p style="text-align: center; color: #4f6f5e; margin-top: 0.5rem;">Fully licensed & regulated · Tanzania registered entity</p>
+            <div class="certificates-grid">
+                
+                <!-- 1. Certificate of Incorporation + picture -->
+                <div class="certificate-item">
+                    <div class="cert-img">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23E9F3EE' rx='30'/%3E%3Cpath fill='%23316B47' d='M50 20L20 38v24l30 18 30-18V38L50 20zm0 10l18 10.8v14.4L50 66l-18-10.8V40.8L50 30z'/%3E%3Ctext x='50' y='68' font-size='14' text-anchor='middle' fill='%23316B47' font-weight='bold'%3EINC%3C/text%3E%3C/svg%3E"
+                             alt="Certificate of Incorporation icon">
+                    </div>
+                    <h4>Certificate of Incorporation</h4>
+                    <p><strong>BRELA Registration</strong><br>No: 157024493</p>
+                    <div class="cert-detail">
+                        📅 Issued: 2022 · Status: Active
+                    </div>
+                    <div class="badge-new">Registered Company</div>
+                </div>
+                
+                <!-- 2. TIN Certificate + picture -->
+                <div class="certificate-item">
+                    <div class="cert-img">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FCF7E8' rx='30'/%3E%3Cpath fill='%234B7F52' d='M30 35h40v6H30v-6zm0 12h40v6H30v-6zm0 12h25v6H30v-6z'/%3E%3Ccircle cx='72' cy='65' r='8' fill='%234B7F52'/%3E%3Ctext x='72' y='68' font-size='9' text-anchor='middle' fill='white'%3ETRA%3C/text%3E%3C/svg%3E"
+                             alt="TIN Certificate Tanzania Revenue Authority">
+                    </div>
+                    <h4>TIN Certificate</h4>
+                    <p><strong>Tanzania Revenue Authority</strong><br>TIN: 157-024-493</p>
+                    <div class="cert-detail">
+                        🧾 Tax compliance · Valid VAT registration
+                    </div>
+                </div>
+                
+                <!-- 3. EWURA License + picture (Class A Electrical License) -->
+                <div class="certificate-item">
+                    <div class="cert-img">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23E2F0F5' rx='30'/%3E%3Cpath fill='%2321677A' d='M50 25L25 45v30l25 15 25-15V45L50 25zm0 12l13 8v10l-13 8-13-8V45l13-8z'/%3E%3Cpath fill='%23FFB347' d='M48 52h4v12h-4zM48 44h4v4h-4z'/%3E%3C/svg%3E"
+                             alt="EWURA Electrical License">
+                    </div>
+                    <h4>EWURA License</h4>
+                    <p><strong>Class A Electrical License</strong><br>No: ELA-2022-008</p>
+                    <div class="cert-detail">
+                        ⚡ Energy & Water Utilities Regulatory Authority
+                    </div>
+                </div>
+                
+                <!-- 4. ERB Registration + picture (Professional Engineer) -->
+                <div class="certificate-item">
+                    <div class="cert-img">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23E9E6F2' rx='30'/%3E%3Cpath fill='%23384E6F' d='M35 38h30v6H35v-6zm0 12h30v6H35v-6zm0 12h18v6H35v-6z'/%3E%3Ccircle cx='72' cy='62' r='9' fill='%23384E6F'/%3E%3Ctext x='72' y='66' font-size='10' text-anchor='middle' fill='white'%3EE%3C/text%3E%3C/svg%3E"
+                             alt="ERB Professional Engineer Registration">
+                    </div>
+                    <h4>ERB Registration</h4>
+                    <p><strong>Professional Engineer</strong><br>Registered Practitioner</p>
+                    <div class="cert-detail">
+                        👷‍♂️ Engineering Registration Board · Reg No: ERB/PE/3421
+                    </div>
+                </div>
+                
+                <!-- 5. NEW: BUSINESS LICENCE (added picture & details) -->
+                <div class="certificate-item">
+                    <div class="cert-img">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23F0EEE6' rx='30'/%3E%3Cpath fill='%23957C3E' d='M32 32h36v8H32v-8zm0 14h36v6H32v-6zm0 12h24v6H32v-6z'/%3E%3Cpath fill='%23B8860B' d='M70 48a8 8 0 110 16 8 8 0 010-16z'/%3E%3Ctext x='70' y='55' font-size='8' text-anchor='middle' fill='white'%3E✓%3C/text%3E%3C/svg%3E"
+                             alt="Business Licence Tanzania">
+                    </div>
+                    <h4>Business Licence</h4>
+                    <p><strong>Trade & Commercial License</strong><br>Licence No: BL/TZ/2024-1190</p>
+                    <div class="cert-detail">
+                        🏛️ Issued by: Ministry of Industry & Trade<br>
+                        ✅ Valid until: Dec 2026 · Class: General Contractor
+                    </div>
+                    <div class="badge-new">Fully Compliant</div>
+                </div>
+            </div>
+            <!-- optional compliance note -->
+            <div style="text-align: center; margin-top: 2.8rem; font-size: 0.85rem; color: #5c7a6b; border-top: 1px dashed #cde0d6; padding-top: 1.8rem;">
+                ⚡ All licenses and certificates are regularly renewed to maintain operational excellence in Tanzania.
+            </div>
+        </div>
+    </section>
+        <!-- Emergency CTA -->
+<div class="emergency-cta">
+    <div class="content-wrapper">
+        <h3>⚡ Electrical Emergency?</h3>
+        <p>24/7 Emergency Service Available Across Tanzania</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 15px; margin: 25px 0; max-width: 500px; margin-left: auto; margin-right: auto;">
+            <!-- Call Button -->
+            <a href="tel:+255682843552" class="emergency-btn" style="background: #dc3545; color: white; padding: 16px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; text-align: center; box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4); border: 2px solid white; transition: all 0.3s ease;">
+                📞 CALL NOW: +255682 843 552
+            </a>
+            
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/255682843552" target="_blank" class="whatsapp-emergency-btn" style="background: #1a5632; color: white; padding: 16px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; text-align: center; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); border: 2px solid white; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fab fa-whatsapp"></i> WhatsApp Now: +255682 843 552
             </a>
         </div>
-    </div>
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <p style="font-style: italic; color: #cc0000; margin-top: 5px;">
-            Genuine Parts & Industrial Solutions Since 2012
+        
+        <p style="margin-top: 1rem; font-size: 1.1rem;">Response Time: <strong>Within 2 hours</strong> in Dar-es-salaam, Dodoma, Mwanza, Mbeya & Arusha</p>
+        <p style="margin-top: 0.5rem; color: #1a5632; font-weight: bold;">
+            <i class="fab fa-whatsapp"></i> WhatsApp preferred for faster response with photos/videos
         </p>
     </div>
-    <div class="header-right">
-        <a href="tel:+255682843552" class="btn-call">📞 Call to Order</a>
-        <button class="btn-quote" id="openCartBtn">🛒 Inquiry Cart (<span id="cartCount">0</span>)</button>
-        <a href="https://kingueletrical.com/" class="back-to-main">🏠 Main Website</a>
-    </div>
 </div>
 
-<div class="filter-bar">
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search products... (e.g., DSE, cable, Yanmar)">
-        <button id="searchBtn">🔍 Search</button>
-    </div>
-    <div class="category-filters" id="categoryFilters">
-        <button class="filter-chip active" data-category="all">All Products</button>
-        <button class="filter-chip" data-category="DSE">DSE Controllers</button>
-        <button class="filter-chip" data-category="CABLES">Cables</button>
-        <button class="filter-chip" data-category="SWITCHES">Switches</button>
-        <button class="filter-chip" data-category="LIGHTING">Lighting</button>
-        <button class="filter-chip" data-category="MOTORS">Motor Controls</button>
-        <button class="filter-chip" data-category="YANMAR">Yanmar Spares</button>
-        <button class="filter-chip" data-category="PERKINS">Perkins Spares</button>
-        <button class="filter-chip" data-category="GENERATORS">Generators</button>
-        <button class="filter-chip" data-category="TOOLS">Tools</button>
-        <button class="filter-chip" data-category="SPARES">Other Spares</button>
-    </div>
-</div>
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="content-wrapper">
+                <h2>Contact Us</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Location</h3>
+                        <p><strong>Headquarters:</strong> Dar-es-salaam & Arusha, Tanzania</p>
+                        <p><strong>Address:</strong> Plot No. 485, Block 43, Nzasa</p>
+                        <p><strong>P.O. Box:</strong> 62313, Dar es Salaam</p>
+                    </div>
+                    <div class="card">
+                        <h3>Contact Info</h3>
+                        <p><strong>Phone:</strong> +255 672 912 802</p>
+                        <p><strong>Phone:</strong> +255 763 957 908</p>
+                        <p><strong>Phone:</strong> +255 682 843 552</p>
+                        <p><strong>Email:</strong> Kinguelectricaltz@gmail.com</p>
+                    </div>
+                    <div class="card">
+                        <h3>Business Hours</h3>
+                        <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
+                        <p><strong>Saturday:</strong> 9:00 AM - 2:00 PM</p>
+                        <p><strong>Emergency Services:</strong> 24/7 Available</p>
+                    </div>
+                </div>
 
-<div class="stats-banner">
-    <div class="stat-item"><span class="stat-number">150+</span> <span>Products</span></div>
-    <div class="stat-item"><span class="stat-number">24/7</span> <span>Technical Support</span></div>
-    <div class="stat-item"><span class="stat-number">FREE</span> <span>Delivery DAR/ARUSHA</span></div>
-    <div class="stat-item"><span class="stat-number">100%</span> <span>Genuine Warranty</span></div>
-</div>
+                <form id="contactForm" style="margin-top: 2rem; max-width: 800px; width: 100%;">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Full Name" required>
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required style="height: 150px;"></textarea>
+                        <div class="form-error"></div>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-<div class="products-section">
-    <div class="section-title">
-        <h2>🛒 All Products</h2>
-        <div class="product-count" id="productCount">Loading products...</div>
-    </div>
-    <div class="products-grid" id="productsGrid"></div>
-</div>
+    <!-- Footer -->
+    <footer>
+        <div class="content-wrapper">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Kingu Electrical</h3>
+                    <p>Leading Electrical Engineering company in Tanzania providing professional power solutions and electrical products since 2017.</p>
+                </div>
 
-<!-- SIMPLIFIED FOOTER with your requested details -->
-<footer>
-    <p>📍 Plot No. 485, Block 43, Nzasa, Dar es Salaam, Tanzania</p>
-    <p>🚚 Free Delivery within Dar es Salaam & Arusha on orders above 200,000 TZS</p>
-    <p>💳 Accepted Payment Methods:</p>
-    <p>📱 Airtel Lipa Number: <strong>149872704 - KINGU ELECTRICAL CO. LTD</strong></p>
-    <p>🏦 Bank Transfer: Stanbic Bank – <strong>9120002759274</strong></p>
-    <p>💵 Cash on Delivery</p>
-    <p>© 2025 Kingu Electrical Company Limited. All Rights Reserved.</p>
-    <p><a href="https://kingueletrical.com/">← Back to Main Website: kinguelectrical.com</a></p>
-</footer>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Our Services</a>
+                    <a href="#products">Products</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
 
-<div class="overlay" id="overlay"></div>
-<div class="inquiry-sidebar" id="inquirySidebar">
-    <div class="inquiry-header">
-        <h3>📋 Your Inquiry Cart</h3>
-        <button id="closeCartBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">✕</button>
-    </div>
-    <div class="inquiry-items" id="inquiryItems">
-        <p style="text-align: center; padding: 20px;">No items added yet.</p>
-    </div>
-    <div class="inquiry-footer">
-        <div class="quick-order-form">
-            <input type="text" id="customerName" placeholder="Your Name" required>
-            <input type="tel" id="customerPhone" placeholder="Phone Number (for quick callback)" required>
-            <textarea id="customerNotes" rows="2" placeholder="Additional notes or delivery location..."></textarea>
-            <button class="btn-submit-inquiry" id="submitInquiryBtn">📞 Submit Inquiry & Get Callback</button>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +255 682 843 552</p>
+                    <p><i class="fas fa-phone"></i> +255 672 912 802</p>
+                    <p><i class="fas fa-envelope"></i> Kinguelectricaltz@gmail.com</p>
+                    <p><i class="fas fa-envelope"></i> Kinguelectricaltz@kingueletrical.com</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; <span id="year">2024</span> Kingu Electrical Company Limited. All Rights Reserved.</p>
+                <p>TIN: 157-024-493 | EWURA License: ELA-2022-008 | Specialist Electrical and Mechanical Contractor | BRELA Registered</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <div class="whatsapp-widget">
+        <button class="whatsapp-toggle" aria-label="Open WhatsApp chat" aria-expanded="false">
+            <i class="fab fa-whatsapp"></i>
+            <span class="notification-badge">3</span>
+        </button>
+        
+        <div class="whatsapp-chat" aria-hidden="true">
+            <div class="chat-header">
+                <div class="agent-info">
+                    <div class="agent-avatar">KG</div>
+                    <div>
+                        <h4>Kingu Electrical Support</h4>
+                        <p>Typically replies within 5 minutes</p>
+                    </div>
+                </div>
+                <button class="close-chat" aria-label="Close chat">×</button>
+            </div>
+            
+            <div class="chat-body">
+                <div class="message received">
+                    <p>Hello! 👋 I'm Eng. Kingu from Kingu Electrical. How can I help you today?</p>
+                    <span class="time">Now</span>
+                </div>
+                
+                <div class="quick-options">
+                    <button class="quick-option" data-message="I need a quote for electrical services">
+                        Get Instant Quote
+                    </button>
+                    <button class="quick-option" data-message="I have an electrical emergency!">
+                        Emergency Help
+                    </button>
+                    <button class="quick-option" data-message="I want to schedule a site inspection">
+                        Schedule Inspection
+                    </button>
+                </div>
+            </div>
+            
+            <div class="chat-footer">
+                <input type="text" placeholder="Type your message..." 
+                       aria-label="Type your WhatsApp message">
+                <button class="send-btn" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    // ============================================================
-    // COMPLETE PRODUCT DATABASE - TRUNCATED FOR BREVITY BUT WORKING
-    // ============================================================
-    const allProducts = [
-        // DSE CONTROLLERS (28 products)
-        { category: "DSE", name: "Deep Sea DSE3110", desc: "Auto start module, basic generator control with alarm monitoring", price: "885,000 TZS", image: "/images/dse/dse3110.png" },
-        { category: "DSE", name: "Deep Sea DSE3110-3", desc: "Auto start with 3-phase monitoring and voltage sensing", price: "825,000 TZS", image: "/images/dse/dse3110-3.jpg" },
-        { category: "DSE", name: "Deep Sea DSE4110", desc: "Auto start with comprehensive alarm monitoring", price: "195,000 TZS", image: "/images/dse/dse4110.jpg" },
-        { category: "DSE", name: "Deep Sea DSE4510", desc: "Automatic mains failure controller, single phase with LCD display", price: "965,000 TZS", image: "/images/dse/dse4510.jpg" },
-        { category: "DSE", name: "Deep Sea DSE4510 MKII", desc: "Automatic mains failure controller, single phase with LCD display", price: "965,000 TZS", image: "/images/dse/dse4510MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSE4520", desc: "ATS controller with remote monitoring and SMS capability", price: "925,000 TZS", image: "/images/dse/dse4520.jpg" },
-        { category: "DSE", name: "Deep Sea DSE4510-3", desc: "3-phase AMF controller with advanced protection", price: "995,000 TZS", image: "/images/dse/dse4510.jpg" },
-        { category: "DSE", name: "Deep Sea DSE5510", desc: "Advanced gen-set controller with LCD and engine monitoring", price: "985,000 TZS", image: "/images/dse/dse5510.jpg" },
-        { category: "DSE", name: "Deep Sea DSE5520", desc: "Remote start with SMS capability and data logging", price: "595,000 TZS", image: "/images/dse/dse5520.jpg" },
-        { category: "DSE", name: "Deep Sea DSE6110", desc: "Gen-set controller, 3-phase monitoring with CAN bus", price: "995,000 TZS", image: "/images/dse/dse6110.jpg" },
-        { category: "DSE", name: "Deep Sea DSE6110 MKII", desc: "Gen-set controller, 3-phase monitoring with CAN bus", price: "995,000 TZS", image: "/images/dse/dse6110MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSE6120", desc: "Advanced controller with load sharing capability", price: "985,000 TZS", image: "/images/dse/dse6120.jpg" },
-        { category: "DSE", name: "Deep Sea DSE6120 MKII", desc: "Advanced controller with load sharing capability", price: "985,000 TZS", image: "/images/dse/dse6120MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSEG8660", desc: "Mains (Utility) Controller", price: "585,000 TZS", image: "/images/dse/DSEG8660.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7210", desc: "Auto start with CAN bus interface and J1939 support", price: "1,585,000 TZS", image: "/images/dse/dse7210.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7220", desc: "Advanced auto start with J1939 and remote monitoring", price: "1,585,000 TZS", image: "/images/dse/dse7220.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7310", desc: "Auto start with remote monitoring and USB interface", price: "1,585,000 TZS", image: "/images/dse/dse7310.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7320", desc: "Color display, advanced controller with graphical interface", price: "1,085,000 TZS", image: "/images/dse/dse7320.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7320 MKII", desc: "Color display, advanced controller with graphical interface", price: "1,385,000 TZS", image: "/images/dse/dse7320MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7420", desc: "High-end controller with Auto Mains (Utility) Failure Control Module", price: "1,995,000 TZS", image: "/images/dse/dse7420.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7410 MKII", desc: "DSE7410 MKII Auto Start Control Module", price: "1,995,000 TZS", image: "/images/dse/dse7410MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7420 MKII", desc: "Auto Mains (Utility) Failure Control Module", price: "1,995,000 TZS", image: "/images/dse/dse7420MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSE8610 MKII", desc: "Color display, multi-language, advanced PLC functionality", price: "1,785,000 TZS", image: "/images/dse/dse8610.jpg" },
-        { category: "DSE", name: "Deep Sea DSE8620 MKII", desc: "Synchronising Auto Mains (Utility) Failure Load Share Control Module", price: "1785,000 TZS", image: "/images/dse/dse8620.jpg" },
-        { category: "DSE", name: "Deep Sea DSE8660 MKII", desc: "Auto Transfer Switch & Mains (Utility) Control Module", price: "1,985,000 TZS", image: "/images/dse/dse8660.jpg" },
-        { category: "DSE", name: "DSE Remote Display Panel", desc: "Remote annunciator for DSE controllers with alarm indication", price: "1,925,000 TZS", image: "/images/dse/remote-panel.jpg" },
-        { category: "DSE", name: "DSE CAN Bus Cable", desc: "CAN bus communication cable for DSE controllers", price: "285,000 TZS", image: "/images/dse/can-cable.jpg" },
-        { category: "DSE", name: "DSE USB Programming Cable", desc: "Programming cable for DSE controllers with driver", price: "95,000 TZS", image: "/images/dse/usb-cable.jpg" },
-        
-        // CABLES & WIRING
-        { category: "CABLES", name: "0.5 mm Single Core Flexible Cable", desc: "PVC insulated, 99.9% pure copper, 100m roll", price: "39,500 TZS", image: "/images/cables/0.5mm-single-core.jpg" },
-        { category: "CABLES", name: "1.5 mm Single Core Flexible Cable", desc: "PVC insulated, 99.9% pure copper conductor, 100m roll", price: "102,000 TZS", image: "/images/cables/1.5mm-single-core.jpg" },
-        { category: "CABLES", name: "2.5 mm Single Core Cable", desc: "Standard single core for house wiring, 100m roll", price: "155,000 TZS", image: "/images/cables/2.5mm-single-core.jpg" },
-        { category: "CABLES", name: "4 mm Single Core Cable", desc: "Heavy duty single core, 100m roll", price: "235,000 TZS", image: "/images/cables/4mm-single-core.jpg" },
-        { category: "CABLES", name: "6 mm Single Core Cable", desc: "Industrial single core, 100m roll", price: "345,000 TZS", image: "/images/cables/6mm-single-core.jpg" },
-        { category: "CABLES", name: "10mm Single Core Cable", desc: "Heavy duty 10mm single core, 100m roll", price: "535,000 TZS", image: "/images/cables/10mm-single-core.jpg" },
-        { category: "CABLES", name: "16mm Single Core Cable", desc: "Heavy industrial cable, 100m roll", price: "785,000 TZS", image: "/images/cables/16mm-single-core.jpg" },
-        { category: "CABLES", name: "0.5mm 2 Core Flexible Cable", desc: "PVC insulated, 2 core, 99.9% pure copper, 100m roll", price: "98,000 TZS", image: "/images/cables/0.5mm-2core.jpg" },
-        { category: "CABLES", name: "0.5mm 2 Core Twisted Cable", desc: "Red & Black twisted flexible cable, 100m roll", price: "86,000 TZS", image: "/images/cables/0.5mm-2core-twisted.jpg" },
-        { category: "CABLES", name: "1.5mm 2 Core Flexible Cable", desc: "Heavy duty 2 core flexible cable, 100m roll", price: "222,000 TZS", image: "/images/cables/1.5mm-2core.jpg" },
-        { category: "CABLES", name: "2.5mm 2 Core Flexible Cable", desc: "Heavy duty flexible cable, 100m roll", price: "325,000 TZS", image: "/images/cables/2.5mm-2core.jpg" },
-        { category: "CABLES", name: "0.75mm 3 Core Flexible Cable", desc: "3 core with earth, flexible, 100m roll", price: "175,000 TZS", image: "/images/cables/0.75mm-3core.jpg" },
-        { category: "CABLES", name: "1.5mm 3 Core Flexible Cable", desc: "3 core heavy duty flexible, 100m roll", price: "292,000 TZS", image: "/images/cables/1.5mm-3core.jpg" },
-        { category: "CABLES", name: "2.5mm 3 Core Flexible Cable", desc: "3 core industrial flexible, 100m roll", price: "385,000 TZS", image: "/images/cables/2.5mm-3core.jpg" },
-        { category: "CABLES", name: "4mm 3 Core Flexible Cable", desc: "3 phase flexible cable, 100m roll", price: "545,000 TZS", image: "/images/cables/4mm-3core.jpg" },
-        { category: "CABLES", name: "10mm 3 Core Flexible Cable", desc: "Industrial 3 phase flexible, 100m roll", price: "2,103,000 TZS", image: "/images/cables/10mm-3core.jpg" },
-        { category: "CABLES", name: "1.5mm 4 Core Flexible Cable", desc: "4 core power cable, 100m roll", price: "447,000 TZS", image: "/images/cables/1.5mm-4core.jpg" },
-        { category: "CABLES", name: "1.5mm 4 Core Submersible Cable", desc: "Waterproof submersible pump cable, 100m roll", price: "508,000 TZS", image: "/images/cables/submersible-4core.jpg" },
-        { category: "CABLES", name: "2.5mm 4 Core Flexible Cable", desc: "4 core industrial cable, 100m roll", price: "585,000 TZS", image: "/images/cables/2.5mm-4core.jpg" },
-        { category: "CABLES", name: "10mm 4 Core Flexible Cable", desc: "Heavy 4 core industrial, 100m roll", price: "2,632,000 TZS", image: "/images/cables/10mm-4core.jpg" },
-        { category: "CABLES", name: "1.5 mm Flat Twin Cable", desc: "PVC flat twin for surface wiring, 100m roll", price: "250,000 TZS", image: "/images/cables/flat-twin-1.5mm.jpg" },
-        { category: "CABLES", name: "2.5 mm Flat Twin Cable", desc: "Heavy duty flat twin, 100m roll", price: "385,000 TZS", image: "/images/cables/flat-twin-2.5mm.jpg" },
-         { category: "CABLES", name: "Armoured Cable 1.5mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "6,500 TZS", image: "/images/cables/armoured-4mm-4core.jpg" },
-         { category: "CABLES", name: "Armoured Cable 2.5mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "8,500 TZS", image: "/images/cables/armoured-4mm-4core.jpg" },
-         { category: "CABLES", name: "Armoured Cable 4mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "10,500 TZS", image: "/images/cables/armoured-4mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 6mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "14,500 TZS", image: "/images/cables/armoured-4mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 10mm x 4 Core", desc: "Armoured cable for industrial applications", price: "20,500 TZS", image: "/images/cables/armoured-10mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 16mm x 4 Core", desc: "Armoured cable for heavy-duty installations", price: "34,000 TZS", image: "/images/cables/armoured-16mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 25mm x 4 Core", desc: "Armoured cable for main power supply lines", price: "44,000 TZS", image: "/images/cables/armoured-25mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 35mm x 4 Core", desc: "Heavy-duty armoured cable for industrial", price: "58,000 TZS", image: "/images/cables/armoured-35mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 50mm x 4 Core", desc: "Industrial armoured cable", price: "85,000 TZS", image: "/images/cables/armoured-50mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 70mm x 4 Core", desc: "Heavy industrial armoured cable", price: "125,000 TZS", image: "/images/cables/armoured-70mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 95mm x 4 Core", desc: "High capacity armoured cable", price: "165,000 TZS", image: "/images/cables/armoured-95mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 120mm x 4 Core", desc: "Heavy industrial power cable", price: "215,000 TZS", image: "/images/cables/armoured-120mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 150mm x 4 Core", desc: "Industrial main feeder cable", price: "265,000 TZS", image: "/images/cables/armoured-150mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 185mm x 4 Core", desc: "Heavy industrial cable", price: "325,000 TZS", image: "/images/cables/armoured-185mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 240mm x 4 Core", desc: "Heavy-duty industrial cable", price: "368,000 TZS", image: "/images/cables/armoured-240mm-4core.jpg" },
-        { category: "CABLES", name: "Cable Lug 16mm", desc: "Pure copper cable lug", price: "1,500 TZS", image: "/images/spares/cable-lug-16mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 25mm", desc: "Pure copper cable lug", price: "1,800 TZS", image: "/images/spares/cable-lug-25mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 35mm", desc: "Pure copper cable lug", price: "2,200 TZS", image: "/images/spares/cable-lug-35mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 50mm", desc: "Pure copper cable lug", price: "2,800 TZS", image: "/images/spares/cable-lug-50mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 70mm", desc: "Pure copper cable lug", price: "3,500 TZS", image: "/images/spares/cable-lug-70mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 95mm", desc: "Pure copper cable lug", price: "4,500 TZS", image: "/images/spares/cable-lug-95mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 120mm", desc: "Pure copper cable lug", price: "5,500 TZS", image: "/images/spares/cable-lug-120mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 150mm", desc: "Pure copper cable lug", price: "6,800 TZS", image: "/images/spares/cable-lug-150mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 185mm", desc: "Pure copper cable lug", price: "8,500 TZS", image: "/images/spares/cable-lug-185mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 240mm", desc: "Pure copper cable lug", price: "13,000 TZS", image: "/images/spares/cable-lug-240mm.jpg" },
-        
-        // SWITCHES
-        { category: "SWITCHES", name: "1 Gang 1 Way Switch Standard", desc: "Standard white switch, smooth edges", price: "3,900 TZS", image: "/images/switches/1gang-1way-white.jpg" },
-        { category: "SWITCHES", name: "1 Gang 2 Way Switch Standard", desc: "2-way switching, white finish", price: "4,500 TZS", image: "/images/switches/1gang-2way-white.jpg" },
-        { category: "SWITCHES", name: "1 Gang 2 Way Switch – Black", desc: "Black finish, modern design", price: "8,000 TZS", image: "/images/switches/1gang-2way-black.jpg" },
-        { category: "SWITCHES", name: "1 Gang 13A Socket with Neon – White", desc: "Power socket with indicator light", price: "8,500 TZS", image: "/images/switches/socket-1gang-white.jpg" },
-        { category: "SWITCHES", name: "1 Gang 13A Socket with Neon – Black", desc: "Power socket with indicator light, black finish", price: "11,000 TZS", image: "/images/switches/socket-1gang-black.jpg" },
-        { category: "SWITCHES", name: "2 Gang 13A Socket", desc: "Double power socket, white finish", price: "12,500 TZS", image: "/images/switches/socket-2gang.jpg" },
-        { category: "SWITCHES", name: "1 Gang 13A Socket with USB", desc: "Power socket with USB charging ports", price: "18,500 TZS", image: "/images/switches/socket-usb.jpg" },
-        { category: "SWITCHES", name: "MCB Schneider 125A 4 Pole", desc: "Schneider Electric MCB C120N 125A 4 pole", price: "92,000 TZS", image: "/images/switches/mcb-schneider-125a.jpg" },
-        { category: "SWITCHES", name: "MCB Schneider 100A 3 Pole", desc: "Schneider MCB C120N 100A 3 pole", price: "69,000 TZS", image: "/images/switches/mcb-schneider-100a-3p.jpg" },
-        { category: "SWITCHES", name: "MCB Schneider 63A 4 Pole", desc: "Schneider MCB 4 pole 63A", price: "26,000 TZS", image: "/images/switches/mcb-schneider-63a.jpg" },
-        { category: "SWITCHES", name: "MCB ABB 4 Pole 32A", desc: "ABB MCB 4 pole 32A circuit breaker", price: "35,000 TZS", image: "/images/switches/mcb-abb-32a.jpg" },
-        { category: "SWITCHES", name: "Change Over Switch 100A", desc: "Manual change over switch for generator and mains", price: "295,000 TZS", image: "/images/switches/changeover-100a.jpg" },
-        { category: "SWITCHES", name: "Automatic Changeover Switch 63A", desc: "Automatic changeover switch 63A three phase", price: "1,050,000 TZS", image: "/images/switches/auto-changeover.jpg" },
-        { category: "SWITCHES", name: "Automatic Changeover Switch 125A", desc: "Automatic changeover switch 125A three phase", price: "1,050,000 TZS", image: "/images/switches/auto-changeover125.jpg" },
-        { category: "SWITCHES", name: "Isolator Switch ABB", desc: "ABB isolator switch for safe electrical isolation", price: "240,000 TZS", image: "/images/switches/isolator-abb.jpg" },
-        { category: "SWITCHES", name: "Motorised Automatic Transfer Change Over Switch 125A Gave Electro", desc: "Motorised Automatic Transfer Change Over Switch 125A", price: "1,050,000 TZS", image: "/images/switches/gave125.jpg" },
-        { category: "SWITCHES", name: "Motorised Automatic Transfer Change Over Switch 63A Gave Electro", desc: "Motorised Automatic Transfer Change Over Switch 63A", price: "1,050,000 TZS", image: "/images/switches/gave63.jpg" },
-        { category: "SWITCHES", name: "Control Box 1HP", desc: "Control box for 1HP water pumps", price: "35,000 TZS", image: "/images/spares/control-box-1hp.jpg" },
-        { category: "SWITCHES", name: "Water Level Controller", desc: "Automatic water level controller", price: "23,000 TZS", image: "/images/spares/water-level-controller.jpg" },
-        { category: "SWITCHES", name: "Timer 24 Hours Theben", desc: "Theben 24-hour timer switch", price: "93,500 TZS", image: "/images/spares/timer-theben.jpg" },
-        { category: "SWITCHES", name: "Photocell Switch", desc: "Automatic photocell for outdoor lighting", price: "12,000 TZS", image: "/images/spares/photocell.jpg" },
-        
-        // LIGHTING
-        { category: "LIGHTING", name: "10W LED Magnetic Track Light", desc: "Warm white, magnetic track light", price: "55,000 TZS", image: "/images/lighting/magnetic-track-10w.jpg" },
-        { category: "LIGHTING", name: "20W LED Flood Light", desc: "Medium floodlight for outdoor use", price: "18,500 TZS", image: "/images/lighting/floodlight-20w.jpg" },
-        { category: "LIGHTING", name: "50W LED Flood Light", desc: "High-power floodlight for yards", price: "35,000 TZS", image: "/images/lighting/floodlight-50w.jpg" },
-        { category: "LIGHTING", name: "100W LED Flood Light", desc: "High-power floodlight, warm white", price: "68,000 TZS", image: "/images/lighting/floodlight-100w.jpg" },
-        { category: "LIGHTING", name: "100W LED Canopy Light", desc: "Durable outdoor ceiling fixture", price: "410,000 TZS", image: "/images/lighting/canopy-light.jpg" },
-        { category: "LIGHTING", name: "LED Panel Light 60x60cm", desc: "Recessed LED panel for offices", price: "125,000 TZS", image: "/images/lighting/panel-60x60.jpg" },
-        { category: "LIGHTING", name: "LED Downlight 6W", desc: "Recessed downlight, warm white", price: "8,500 TZS", image: "/images/lighting/downlight-6w.jpg" },
-        { category: "LIGHTING", name: "LED Downlight 12W", desc: "Recessed downlight, high lumen", price: "12,500 TZS", image: "/images/lighting/downlight-12w.jpg" },
-        { category: "LIGHTING", name: "LED Bulb 9W", desc: "High brightness LED bulb", price: "5,500 TZS", image: "/images/lighting/bulb-9w.jpg" },
-        { category: "LIGHTING", name: "LED Tube Light 4ft", desc: "T8 LED tube, cool white", price: "12,500 TZS", image: "/images/lighting/tube-4ft.jpg" },
-        { category: "LIGHTING", name: "Solar Street Light 30W", desc: "Complete solar street light with pole", price: "185,000 TZS", image: "/images/lighting/solar-street-30w.jpg" },
-        { category: "LIGHTING", name: "Solar Street Light 60W", desc: "High power solar street light", price: "285,000 TZS", image: "/images/lighting/solar-street-60w.jpg" },
-        { category: "LIGHTING", name: "12-Globe Crystal Pendant Chandelier", desc: "Chrome finish, crystal globes", price: "770,000 TZS", image: "/images/lighting/chandelier-crystal.jpg" },
-        { category: "LIGHTING", name: "12-Globe Modern Pendant Chandelier", desc: "Matte black, opal glass globes", price: "600,000 TZS", image: "/images/lighting/chandelier-modern.jpg" },
-        
-        // MOTOR CONTROLS
-        { category: "MOTORS", name: "1.5HP Control Switch For Pump", desc: "Single phase pump controller with protection", price: "55,000 TZS", image: "/images/motors/pump-control-1.5hp.jpg" },
-        { category: "MOTORS", name: "1.5HP DOL Starter", desc: "Direct-on-line starter for motors", price: "79,000 TZS", image: "/images/motors/dol-starter-1.5hp.jpg" },
-        { category: "MOTORS", name: "3HP DOL Starter", desc: "Direct-on-line starter for 3HP motors", price: "125,000 TZS", image: "/images/motors/dol-starter-3hp.jpg" },
-        { category: "MOTORS", name: "5HP DOL Starter", desc: "Direct-on-line starter for 5HP motors", price: "185,000 TZS", image: "/images/motors/dol-starter-5hp.jpg" },
-        { category: "MOTORS", name: "IC Contactor 125A Schneider", desc: "Schneider IC contactor 125A for motor control", price: "35,000 TZS", image: "/images/motors/contactor-125a.jpg" },
-        { category: "MOTORS", name: "AC Contactor 300A Siemens", desc: "Siemens AC contactor 300A for heavy industrial", price: "550,000 TZS", image: "/images/motors/contactor-300a.jpg" },
-        { category: "MOTORS", name: "AC Contactor Chint NXC-09 20A", desc: "Chint contactor for small motors", price: "17,000 TZS", image: "/images/motors/contactor-chint-20a.jpg" },
-        { category: "MOTORS", name: "AC Contactor Chint NXC-32 50A", desc: "Chint contactor 50A", price: "38,000 TZS", image: "/images/motors/contactor-chint-50a.jpg" },
-        { category: "MOTORS", name: "Soft Starter 15kW", desc: "Soft starter for smooth motor starting", price: "185,000 TZS", image: "/images/motors/soft-starter-15kw.jpg" },
-        { category: "MOTORS", name: "Soft Starter 22kW", desc: "Industrial soft starter", price: "245,000 TZS", image: "/images/motors/soft-starter-22kw.jpg" },
-        { category: "MOTORS", name: "VFD 1.5kW", desc: "Variable frequency drive for motor speed control", price: "185,000 TZS", image: "/images/motors/vfd-1.5kw.jpg" },
-        { category: "MOTORS", name: "VFD 2.2kW", desc: "Variable frequency drive", price: "245,000 TZS", image: "/images/motors/vfd-2.2kw.jpg" },
-        { category: "MOTORS", name: "Motor Circuit Breaker GV2 9-14A", desc: "Schneider GV2 motor circuit breaker", price: "65,000 TZS", image: "/images/motors/gv2-breaker.jpg" },
-        
-        // YANMAR SPARES
-        { category: "YANMAR", name: "Yanmar 3TN Piston Ring Set", desc: "Complete piston rings for 3TN series", price: "225,000 TZS", image: "/images/yanmar/3tn-piston-ring.jpg" },
-        { category: "YANMAR", name: "Yanmar 3TN Cylinder Liner", desc: "Cast iron cylinder liner", price: "415,000 TZS", image: "/images/yanmar/3tn-cylinder-liner.jpg" },
-        { category: "YANMAR", name: "Yanmar 4TN Piston Kit", desc: "Complete piston with rings", price: "385,000 TZS", image: "/images/yanmar/4tn-piston-kit.jpg" },
-        { category: "YANMAR", name: "Yanmar 4TN Cylinder Liner Kit", desc: "Wet cylinder liner with O-rings", price: "325,000 TZS", image: "/images/yanmar/4tn-cylinder-liner.jpg" },
-        { category: "YANMAR", name: "Yanmar 3TN,4TN Complete Overhaul kit", desc: "Complete overhaul kit set", price: "825,000 TZS", image: "/images/yanmar/overhaul.jpg" },
-        { category: "YANMAR", name: "Yanmar Fuel Injector Nozzle", desc: "Genuine injector nozzle", price: "165,000 TZS", image: "/images/yanmar/injector-nozzle.jpg" },
-        { category: "YANMAR", name: "Yanmar Oil Filter", desc: "Genuine oil filter", price: "40,500 TZS", image: "/images/yanmar/oil-filter.jpg" },
-        { category: "YANMAR", name: "Yanmar Fuel Filter", desc: "Fuel filter/water separator", price: "40,500 TZS", image: "/images/yanmar/fuel-filter.jpg" },
-        { category: "YANMAR", name: "Yanmar Water Pump Assembly", desc: "Complete water pump", price: "385,000 TZS", image: "/images/yanmar/water-pump.jpg" },
-        { category: "YANMAR", name: "Yanmar Turbocharger", desc: "Complete turbo assembly", price: "1,785,000 TZS", image: "/images/yanmar/turbocharger.jpg" },
-        { category: "YANMAR", name: "Yanmar Crankshaft", desc: "Balanced crankshaft", price: "1,550,000 TZS", image: "/images/yanmar/crankshaft.jpg" },
-        { category: "YANMAR", name: "Yanmar Gasket Kit", desc: "Complete overhaul gasket kit", price: "205,000 TZS", image: "/images/yanmar/gasket-kit.jpg" },
-        
-        // PERKINS SPARES
-        { category: "PERKINS", name: "Perkins 1104 Piston Kit", desc: "Complete piston with rings", price: "385,000 TZS", image: "/images/perkins/1104-piston-kit.jpg" },
-        { category: "PERKINS", name: "Perkins 1104 Cylinder Liner", desc: "Wet cylinder liner kit", price: "245,000 TZS", image: "/images/perkins/1104-cylinder-liner.png" },
-        { category: "PERKINS", name: "Perkins 1104 Connecting Rod", desc: "Forged connecting rod", price: "285,000 TZS", image: "/images/perkins/1104-connecting-rod.jpg" },
-        { category: "PERKINS", name: "Perkins 1104 Gasket Kit", desc: "Complete overhaul gasket set", price: "255,000 TZS", image: "/images/perkins/1104-gasket-kit.jpg" },
-        { category: "PERKINS", name: "Perkins Fuel Injector", desc: "Complete injector assembly", price: "285,000 TZS", image: "/images/perkins/fuel-injector.jpg" },
-        { category: "PERKINS", name: "Perkins Turbocharger", desc: "Complete turbo assembly", price: "485,000 TZS", image: "/images/perkins/Perkin-turbocharger.jpg" },
-        { category: "PERKINS", name: "Perkins Crankshaft", desc: "Precision ground crankshaft", price: "595,000 TZS", image: "/images/perkins/Perkin-crankshaft.jpg" },
-        { category: "PERKINS", name: "Perkins Oil Filter", desc: "Genuine oil filter", price: "40,500 TZS", image: "/images/perkins/perkin-oil-filter.jpg" },
-        { category: "PERKINS", name: "Perkins Water Pump", desc: "Circulating water pump", price: "245,000 TZS", image: "/images/perkins/perkins-water-pump.jpg" },
-        
-        // GENERATORS
-        { category: "GENERATORS", name: "10kVA Diesel Generator", desc: "Portable diesel generator with ATS panel", price: "5,200,000 TZS", image: "/images/generators/generator.png" },
-        { category: "GENERATORS", name: "15kVA Home Generator", desc: "Residential generator with automatic transfer switch", price: "14,800,000 TZS", image: "/images/generators/generator.png" },
-        { category: "GENERATORS", name: "25kVA Standby Generator", desc: "Commercial generator with auto start", price: "27,200,000 TZS", image: "/images/generators/generator.png" },
-        { category: "GENERATORS", name: "50kVA Silent Generator", desc: "Super silent generator for residential areas", price: "52,500,000 TZS", image: "/images/generators/generator.png" },
-        { category: "GENERATORS", name: "100kVA Diesel Generator", desc: "Complete generator set with ATS", price: "125,500,000 TZS", image: "/images/generators/generator.png" },
-        { category: "GENERATORS", name: "Generator ATS Panel", desc: "Automatic transfer switch panel", price: "450,000 TZS", image: "/images/generators/ats-panel.png" },
-        { category: "GENERATORS", name: "Generator Control Panel", desc: "Remote monitoring panel", price: "285,000 TZS", image: "/images/generators/control-panel.jpg" },
-        
-        // TOOLS
-        { category: "TOOLS", name: "Clamp Meter Fluke 325", desc: "Fluke professional clamp meter", price: "2,080,000 TZS", image: "/images/tools/fluke-325.jpg" },
-        { category: "TOOLS", name: "Clamp Meter UNI-T UT205", desc: "UNI-T professional clamp meter", price: "205,000 TZS", image: "/images/tools/uni-t-ut205.jpg" },
-        { category: "TOOLS", name: "Multimeter UNI-T UT39C+", desc: "Digital multimeter", price: "170,000 TZS", image: "/images/tools/uni-t-ut39c.jpg" },
-        { category: "TOOLS", name: "Hydraulic Crimping Tool YKK 240", desc: "Hydraulic crimping tool", price: "450,000 TZS", image: "/images/tools/crimping-tool.jpg" },
-        
-        // OTHER SPARES
-        { category: "SPARES", name: "AVR SX460A", desc: "Automatic Voltage Regulator", price: "650,000 TZS", image: "/images/spares/avr-sx460a.jpg" },
-        { category: "SPARES", name: "Surge Protective Device ABB", desc: "ABB surge protector DC", price: "492,000 TZS", image: "/images/spares/surge-abb.jpg" },
-        { category: "SPARES", name: "Cable Tray 50x50mm", desc: "Galvanized cable tray", price: "47,000 TZS", image: "/images/spares/cable-tray.jpg" },
-        { category: "SPARES", name: "Step Up Down Transformer 750W", desc: "Voltage converter", price: "358,000 TZS", image: "/images/spares/transformer-750w.jpg" },
-        { category: "SPARES", name: "Submersible Water Pump 0.9HP", desc: "Complete submersible pump", price: "350,000 TZS", image: "/images/spares/pump.jpg" },
-        { category: "SPARES", name: "Submersible Water Pump 3HP", desc: "Submersible pump for deep wells", price: "600,000 TZS", image: "/images/spares/pump.jpg" }
-    ];
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
-    let cart = [];
-
-    function renderProducts() {
-        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-        const activeCategory = document.querySelector('.filter-chip.active').dataset.category;
-        
-        let filtered = allProducts.filter(p => {
-            const matchesSearch = p.name.toLowerCase().includes(searchTerm) || p.desc.toLowerCase().includes(searchTerm);
-            const matchesCategory = activeCategory === 'all' || p.category === activeCategory;
-            return matchesSearch && matchesCategory;
+    <script>
+        // ===== LOADING SCRIPT (20 seconds total) =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            const progressFill = document.getElementById('loading-progress');
+            const progressText = document.getElementById('progressText');
+            const body = document.body;
+            
+            const TOTAL_TIME = 20000;
+            const UPDATE_INTERVAL = 100;
+            const TOTAL_UPDATES = TOTAL_TIME / UPDATE_INTERVAL;
+            const PROGRESS_PER_UPDATE = 100 / TOTAL_UPDATES;
+            
+            let progress = 0;
+            let startTime = Date.now();
+            
+            const messages = [
+                { time: 0, text: "Initializing electrical systems..." },
+                { time: 19000, text: "Welcome to Kingu Electrical!" }
+            ];
+            
+            function preloadCriticalContent() {
+                const criticalImages = [
+                    'assets/icons/kingu.svg'
+                ];
+                
+                criticalImages.forEach(src => {
+                    const img = new Image();
+                    img.src = src;
+                });
+                
+                const bgImg = new Image();
+                bgImg.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = Math.min(this.width, 1920);
+                    canvas.height = Math.min(this.height, 1080);
+                    ctx.drawImage(this, 0, 0, canvas.width, canvas.height);
+                    
+                    const optimizedBg = canvas.toDataURL('image/jpeg', 0.7);
+                    document.body.style.backgroundImage = `url(${optimizedBg})`;
+                };
+                bgImg.src = 'Background.jpg';
+                
+                const font = new FontFace('Poppins', 'url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2)');
+                font.load().then(() => {
+                    document.fonts.add(font);
+                });
+            }
+            
+            preloadCriticalContent();
+            
+            const progressInterval = setInterval(() => {
+                const elapsed = Date.now() - startTime;
+                progress = (elapsed / TOTAL_TIME) * 100;
+                
+                if (progress <= 100) {
+                    progressFill.style.width = progress + '%';
+                    
+                    const currentMessage = messages
+                        .filter(m => elapsed >= m.time)
+                        .pop();
+                    
+                    if (currentMessage && progressText.textContent !== currentMessage.text) {
+                        progressText.textContent = currentMessage.text;
+                    }
+                }
+                
+                if (progress >= 100 || elapsed >= TOTAL_TIME) {
+                    clearInterval(progressInterval);
+                    completeLoading();
+                }
+            }, UPDATE_INTERVAL);
+            
+            setTimeout(completeLoading, 21000);
+            
+            function completeLoading() {
+                progressFill.style.width = '100%';
+                progressText.textContent = "Welcome to Kingu Electrical!";
+                
+                setTimeout(() => {
+                    loadingScreen.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                        body.classList.remove('loading');
+                        
+                        const elements = [
+                            document.querySelector('nav'),
+                            document.querySelector('header'),
+                            document.querySelector('.promo-banner'),
+                            document.querySelector('.kingu-shop-cta'),
+                            document.querySelector('#stats'),
+                            document.querySelector('#about'),
+                            document.querySelector('#team'),
+                            document.querySelector('#packages'),
+                            document.querySelector('#services'),
+                            document.querySelector('.booking-widget'),
+                            document.querySelector('#products'),
+                            document.querySelector('#projects'),
+                            document.querySelector('#service-area'),
+                            document.querySelector('#resources'),
+                            document.querySelector('#videos'),
+                            document.querySelector('#certificates'),
+                            document.querySelector('.emergency-cta'),
+                            document.querySelector('#contact'),
+                            document.querySelector('footer')
+                        ];
+                        
+                        elements.forEach((el, index) => {
+                            if (el) {
+                                setTimeout(() => {
+                                    el.style.opacity = '1';
+                                    el.style.visibility = 'visible';
+                                }, index * 100);
+                            }
+                        });
+                        
+                        initScrollAnimations();
+                        
+                    }, 500);
+                }, 1000);
+            }
         });
         
-        const grid = document.getElementById('productsGrid');
-        document.getElementById('productCount').innerText = `${filtered.length} products found`;
+        // ===== NAVIGATION =====
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
         
-        if (filtered.length === 0) {
-            grid.innerHTML = '<div class="no-results">🔍 No products found. Try a different search or category.</div>';
-            return;
-        }
-        
-        grid.innerHTML = filtered.map(product => `
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'">
-                </div>
-                <div class="product-info">
-                    <div class="product-category">${product.category}</div>
-                    <div class="product-title">${product.name}</div>
-                    <div class="product-description">${product.desc}</div>
-                    <div class="product-price">${product.price}</div>
-                </div>
-                <div class="product-actions">
-                    <button class="btn-add" onclick="addToCart('${product.name.replace(/'/g, "\\'")}', '${product.price}')">Add to Inquiry</button>
-                    <button class="btn-inquire" onclick="quickInquire('${product.name.replace(/'/g, "\\'")}')">Quick Call</button>
-                </div>
-            </div>
-        `).join('');
-    }
-    
-    function addToCart(name, price) {
-        cart.push({ name, price });
-        updateCartUI();
-        document.getElementById('openCartBtn').click();
-    }
-    
-    function updateCartUI() {
-        document.getElementById('cartCount').innerText = cart.length;
-        const cartContainer = document.getElementById('inquiryItems');
-        
-        if (cart.length === 0) {
-            cartContainer.innerHTML = '<p style="text-align: center; padding: 20px;">No items added yet.</p>';
-            return;
-        }
-        
-        cartContainer.innerHTML = cart.map((item, idx) => `
-            <div class="inquiry-item">
-                <div><strong>${item.name}</strong><br>${item.price}</div>
-                <button onclick="removeFromCart(${idx})" style="background: #dc2626; color: white; border: none; border-radius: 20px; padding: 4px 12px; cursor: pointer;">Remove</button>
-            </div>
-        `).join('');
-    }
-    
-    function removeFromCart(index) {
-        cart.splice(index, 1);
-        updateCartUI();
-    }
-    
-    function quickInquire(productName) {
-        document.getElementById('customerNotes').value = `Interested in: ${productName}`;
-        document.getElementById('openCartBtn').click();
-    }
-    
-    // Event Listeners
-    document.getElementById('searchBtn').addEventListener('click', renderProducts);
-    document.getElementById('searchInput').addEventListener('keyup', (e) => {
-        if (e.key === 'Enter') renderProducts();
-    });
-    
-    document.querySelectorAll('.filter-chip').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            renderProducts();
+        hamburger.addEventListener('click', () => {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = !isExpanded ? 'hidden' : 'auto';
         });
-    });
-    
-    document.getElementById('openCartBtn').addEventListener('click', () => {
-        document.getElementById('inquirySidebar').classList.add('open');
-        document.getElementById('overlay').classList.add('active');
-    });
-    
-    document.getElementById('closeCartBtn').addEventListener('click', () => {
-        document.getElementById('inquirySidebar').classList.remove('open');
-        document.getElementById('overlay').classList.remove('active');
-    });
-    
-    document.getElementById('overlay').addEventListener('click', () => {
-        document.getElementById('inquirySidebar').classList.remove('open');
-        document.getElementById('overlay').classList.remove('active');
-    });
-    
-    document.getElementById('submitInquiryBtn').addEventListener('click', () => {
-        const name = document.getElementById('customerName').value;
-        const phone = document.getElementById('customerPhone').value;
-        const notes = document.getElementById('customerNotes').value;
         
-        if (!name || !phone) {
-            alert('Please provide your name and phone number for callback');
-            return;
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    const dropdown = toggle.parentElement;
+                    dropdown.classList.toggle('active');
+                    
+                    document.querySelectorAll('.nav-dropdown').forEach(other => {
+                        if (other !== dropdown) {
+                            other.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
+        
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.setAttribute('aria-expanded', 'false');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                
+                document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+        });
+        
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1024 && 
+                navMenu.classList.contains('active') &&
+                !navMenu.contains(e.target) &&
+                !hamburger.contains(e.target)) {
+                hamburger.setAttribute('aria-expanded', 'false');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // ===== FORM VALIDATION =====
+        const bookingForm = document.getElementById('bookingForm');
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formSuccess = document.getElementById('formSuccess');
+        
+        if (bookingForm) {
+            const inputs = bookingForm.querySelectorAll('input, select, textarea');
+            
+            inputs.forEach(input => {
+                input.addEventListener('blur', () => {
+                    validateField(input);
+                });
+                
+                input.addEventListener('focus', () => {
+                    clearError(input);
+                });
+                
+                if (input.hasAttribute('required')) {
+                    input.addEventListener('input', () => {
+                        if (input.value.trim()) {
+                            clearError(input);
+                        }
+                    });
+                }
+            });
+            
+            bookingForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+                inputs.forEach(input => {
+                    if (!validateField(input)) {
+                        isValid = false;
+                    }
+                });
+                
+                if (!isValid) {
+                    const firstError = this.querySelector('.form-error.show');
+                    if (firstError) {
+                        firstError.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'center' 
+                        });
+                    }
+                    return;
+                }
+                
+                const originalText = submitBtn.textContent;
+                submitBtn.innerHTML = '<span class="loading-spinner"></span>' + submitBtn.getAttribute('data-loading-text');
+                submitBtn.disabled = true;
+                
+                try {
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+                    
+                    formSuccess.innerHTML = `
+                        <strong>✓ Inspection Scheduled Successfully!</strong><br>
+                        We'll call you at <strong>${this.querySelector('input[type="tel"]').value}</strong> 
+                        within 30 minutes to confirm.
+                    `;
+                    formSuccess.classList.add('show');
+                    
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    this.reset();
+                    
+                    setTimeout(() => {
+                        formSuccess.classList.remove('show');
+                    }, 10000);
+                    
+                } catch (error) {
+                    formSuccess.innerHTML = `
+                        <strong style="color: #ff6b6b;">✗ Submission Failed</strong><br>
+                        Please try again or call +255 682 843 552
+                    `;
+                    formSuccess.classList.add('show');
+                    
+                } finally {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
         }
         
-        const items = cart.map(i => `${i.name} (${i.price})`).join('\n');
-        const message = `New Inquiry from ${name} (${phone})\n\nProducts:\n${items}\n\nNotes: ${notes}`;
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you! Your message has been submitted. We will contact you shortly.');
+                this.reset();
+            });
+        }
         
-        window.location.href = `https://wa.me/255682843552?text=${encodeURIComponent(message)}`;
+        function validateField(field) {
+            const errorElement = field.parentElement.querySelector('.form-error');
+            
+            if (field.hasAttribute('required') && !field.value.trim()) {
+                showError(field, 'This field is required');
+                return false;
+            }
+            
+            if (field.type === 'email' && field.value.trim()) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(field.value)) {
+                    showError(field, 'Please enter a valid email address');
+                    return false;
+                }
+            }
+            
+            if (field.type === 'tel' && field.value.trim()) {
+                const phoneRegex = /^[0-9+]{10,15}$/;
+                if (!phoneRegex.test(field.value.replace(/\s/g, ''))) {
+                    showError(field, 'Please enter a valid phone number');
+                    return false;
+                }
+            }
+            
+            clearError(field);
+            return true;
+        }
         
-        alert('Inquiry sent! We will call you within 30 minutes.');
-        cart = [];
-        updateCartUI();
-        document.getElementById('inquirySidebar').classList.remove('open');
-        document.getElementById('overlay').classList.remove('active');
-        document.getElementById('customerName').value = '';
-        document.getElementById('customerPhone').value = '';
-        document.getElementById('customerNotes').value = '';
-    });
-    
-    renderProducts();
-</script>
+        function showError(field, message) {
+            const errorElement = field.parentElement.querySelector('.form-error');
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+            field.setAttribute('aria-invalid', 'true');
+        }
+        
+        function clearError(field) {
+            const errorElement = field.parentElement.querySelector('.form-error');
+            errorElement.textContent = '';
+            errorElement.classList.remove('show');
+            field.removeAttribute('aria-invalid');
+        }
+        
+        // ===== WHATSAPP WIDGET =====
+        const whatsappToggle = document.querySelector('.whatsapp-toggle');
+        const whatsappChat = document.querySelector('.whatsapp-chat');
+        const closeChat = document.querySelector('.close-chat');
+        const quickOptions = document.querySelectorAll('.quick-option');
+        const chatInput = document.querySelector('.chat-footer input');
+        const sendBtn = document.querySelector('.send-btn');
+        
+        whatsappToggle.addEventListener('click', () => {
+            const isExpanded = whatsappToggle.getAttribute('aria-expanded') === 'true';
+            whatsappToggle.setAttribute('aria-expanded', !isExpanded);
+            whatsappChat.setAttribute('aria-hidden', isExpanded);
+            
+            if (!isExpanded) {
+                const badge = document.querySelector('.notification-badge');
+                badge.style.display = 'none';
+            }
+        });
+        
+        closeChat.addEventListener('click', () => {
+            whatsappToggle.setAttribute('aria-expanded', 'false');
+            whatsappChat.setAttribute('aria-hidden', 'true');
+        });
+        
+        quickOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const message = option.getAttribute('data-message');
+                chatInput.value = message;
+                chatInput.focus();
+            });
+        });
+        
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (!message) return;
+            
+            const phone = '255682843552';
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+            
+            chatInput.value = '';
+            whatsappToggle.setAttribute('aria-expanded', 'false');
+            whatsappChat.setAttribute('aria-hidden', 'true');
+        }
+        
+        sendBtn.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        document.addEventListener('click', (e) => {
+            if (!whatsappChat.contains(e.target) && 
+                !whatsappToggle.contains(e.target) && 
+                whatsappChat.getAttribute('aria-hidden') === 'false') {
+                whatsappToggle.setAttribute('aria-expanded', 'false');
+                whatsappChat.setAttribute('aria-hidden', 'true');
+            }
+        });
+        
+        // ===== BACK TO TOP =====
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // ===== SCROLL ANIMATIONS =====
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.card, .service-item, .stat-item, .team-member, .package-item, .product-item, .project-item, .resource-item, .certificate-item').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(element);
+            });
+        }
+        
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    if (window.innerWidth <= 1024) {
+                        hamburger.setAttribute('aria-expanded', 'false');
+                        navMenu.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                        document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
+                }
+            });
+        });
+        
+        // ===== UPDATE YEAR =====
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // ===== LAZY LOAD IMAGES =====
+        function lazyLoadImages() {
+            const images = document.querySelectorAll('img[data-src]');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+        }
+        
+        window.addEventListener('load', lazyLoadImages);
+        
+        // ===== FIX MOBILE VIEWPORT HEIGHT =====
+        function setVhProperty() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        setVhProperty();
+        window.addEventListener('resize', setVhProperty);
+        window.addEventListener('orientationchange', setVhProperty);
+    </script>
 </body>
 </html>
