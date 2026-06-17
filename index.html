@@ -89,6 +89,60 @@
             --gray-bg: #f9fafb;
             --text-dark: #1f2937;
             --text-light: #6b7280;
+            --yellow: #eab308;
+            --orange: #f97316;
+        }
+
+        /* VAT Info Bar */
+        .vat-info-bar {
+            background: #fef3c7;
+            border-bottom: 2px solid #fcd34d;
+            padding: 8px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #92400e;
+            font-weight: 500;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            background: #25D366;
+            color: white;
+            border-radius: 60px;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.06);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.55);
+        }
+
+        .whatsapp-float .icon {
+            font-size: 28px;
+        }
+
+        .whatsapp-float .text {
+            line-height: 1.2;
+        }
+
+        .whatsapp-float .sub {
+            font-size: 0.7rem;
+            font-weight: 400;
+            opacity: 0.85;
         }
 
         .top-bar {
@@ -248,10 +302,20 @@
             cursor: pointer;
         }
 
+        .filter-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
         .category-filters {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            flex: 3;
         }
 
         .filter-chip {
@@ -268,6 +332,30 @@
         .filter-chip.active {
             background: var(--green-dark);
             color: white;
+        }
+
+        .btn-clear {
+            background: #6b7280;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-clear:hover {
+            background: #4b5563;
+        }
+
+        .sort-select {
+            padding: 8px 12px;
+            border-radius: 40px;
+            border: 1px solid #d1d5db;
+            background: white;
+            font-size: 0.85rem;
+            cursor: pointer;
         }
 
         .stats-banner {
@@ -380,11 +468,59 @@
             overflow: hidden;
         }
 
+        .product-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .stock-badge {
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .stock-badge.in-stock {
+            background: #16a34a;
+            color: white;
+        }
+
+        .stock-badge.low-stock {
+            background: var(--orange);
+            color: white;
+        }
+
+        .stock-badge.out-of-stock {
+            background: var(--red);
+            color: white;
+        }
+
+        .stock-badge.on-order {
+            background: var(--yellow);
+            color: #1f2937;
+        }
+
+        .price-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: baseline;
+            margin-bottom: 12px;
+        }
+
         .product-price {
             font-size: 1.25rem;
             font-weight: 700;
             color: var(--red-dark);
-            margin-bottom: 12px;
+        }
+
+        .price-vat-note {
+            font-size: 0.7rem;
+            color: var(--text-light);
         }
 
         .product-actions {
@@ -410,6 +546,11 @@
             background: var(--green-dark);
         }
 
+        .btn-add:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
         .btn-inquire {
             background: transparent;
             border: 1px solid var(--red);
@@ -417,6 +558,23 @@
             padding: 8px;
             border-radius: 40px;
             cursor: pointer;
+        }
+
+        .btn-whatsapp-product {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-whatsapp-product:hover {
+            background: #1da851;
         }
 
         .inquiry-sidebar {
@@ -444,6 +602,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .inquiry-header button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 8px;
+            line-height: 1;
         }
 
         .inquiry-items {
@@ -527,17 +695,30 @@
             .main-header { flex-direction: column; text-align: center; }
             .filter-bar { flex-direction: column; }
             .search-box { width: 100%; }
-            .category-filters { justify-content: center; }
+            .filter-controls { flex-direction: column; align-items: stretch; }
+            .category-filters { justify-content: center; max-height: 200px; overflow-y: auto; }
             .products-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
             .inquiry-sidebar { width: 100%; right: -100%; }
             .stats-banner { flex-direction: column; align-items: center; }
             .header-right { justify-content: center; }
             .logo-text { white-space: normal; text-align: center; }
+            .top-bar .contact-info { justify-content: center; width: 100%; }
+            .top-bar { justify-content: center; text-align: center; }
+            .whatsapp-float { bottom: 16px; right: 16px; padding: 10px 16px; font-size: 0.85rem; }
+            .whatsapp-float .icon { font-size: 22px; }
+            .whatsapp-float .sub { display: none; }
         }
     </style>
 </head>
 <body>
 
+<!-- ================= VAT INFO BAR ================= -->
+<div class="vat-info-bar">
+    💰 <strong>All prices are VAT EXCLUSIVE.</strong> 18% VAT will be added at checkout. 
+    <span style="white-space:nowrap;">📞 Call for bulk discounts!</span>
+</div>
+
+<!-- ================= TOP BAR ================= -->
 <div class="top-bar">
     <div class="contact-info">
         <span>📞 <a href="tel:+255682843552">+255 682 843 552</a></span>
@@ -547,6 +728,7 @@
     Karibu sana....Order NASI
 </div>
 
+<!-- ================= HEADER ================= -->
 <div class="main-header">
     <div class="logo-area">
         <div class="nav-container">
@@ -572,26 +754,39 @@
     </div>
 </div>
 
+<!-- ================= FILTER BAR ================= -->
 <div class="filter-bar">
     <div class="search-box">
         <input type="text" id="searchInput" placeholder="Search products... (e.g., DSE, cable, Yanmar)">
         <button id="searchBtn">🔍 Search</button>
     </div>
-    <div class="category-filters" id="categoryFilters">
-        <button class="filter-chip active" data-category="all">All Products</button>
-        <button class="filter-chip" data-category="DSE">DSE Controllers</button>
-        <button class="filter-chip" data-category="CABLES">Cables</button>
-        <button class="filter-chip" data-category="SWITCHES">Switches</button>
-        <button class="filter-chip" data-category="LIGHTING">Lighting</button>
-        <button class="filter-chip" data-category="MOTORS">Motor Controls</button>
-        <button class="filter-chip" data-category="YANMAR">Yanmar Spares</button>
-        <button class="filter-chip" data-category="PERKINS">Perkins Spares</button>
-        <button class="filter-chip" data-category="GENERATORS">Generators</button>
-        <button class="filter-chip" data-category="TOOLS">Tools</button>
-        <button class="filter-chip" data-category="SPARES">Other Spares</button>
+    <div class="filter-controls">
+        <div class="category-filters" id="categoryFilters">
+            <button class="filter-chip active" data-category="all">All Products</button>
+            <button class="filter-chip" data-category="DSE">DSE Controllers</button>
+            <button class="filter-chip" data-category="CABLES">Cables</button>
+            <button class="filter-chip" data-category="SWITCHES">Switches</button>
+            <button class="filter-chip" data-category="LIGHTING">Lighting</button>
+            <button class="filter-chip" data-category="MOTORS">Motor Controls</button>
+            <button class="filter-chip" data-category="YANMAR">Yanmar Spares</button>
+            <button class="filter-chip" data-category="PERKINS">Perkins Spares</button>
+            <button class="filter-chip" data-category="GENERATORS">Generators</button>
+            <button class="filter-chip" data-category="TOOLS">Tools</button>
+            <button class="filter-chip" data-category="SPARES">Other Spares</button>
+        </div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <select id="sortSelect" class="sort-select">
+                <option value="default">Sort by: Default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+            </select>
+            <button id="clearFiltersBtn" class="btn-clear">🗑️ Clear Filters</button>
+        </div>
     </div>
 </div>
 
+<!-- ================= STATS BANNER ================= -->
 <div class="stats-banner">
     <div class="stat-item"><span class="stat-number">150+</span> <span>Products</span></div>
     <div class="stat-item"><span class="stat-number">24/7</span> <span>Technical Support</span></div>
@@ -599,6 +794,7 @@
     <div class="stat-item"><span class="stat-number">100%</span> <span>Genuine Warranty</span></div>
 </div>
 
+<!-- ================= PRODUCTS SECTION ================= -->
 <div class="products-section">
     <div class="section-title">
         <h2>🛒 All Products</h2>
@@ -607,7 +803,7 @@
     <div class="products-grid" id="productsGrid"></div>
 </div>
 
-<!-- SIMPLIFIED FOOTER with your requested details -->
+<!-- ================= FOOTER ================= -->
 <footer>
     <p>📍 Plot No. 485, Block 43, Nzasa, Dar es Salaam, Tanzania</p>
     <p>🚚 Free Delivery within Dar es Salaam & Arusha on orders above 200,000 TZS</p>
@@ -619,11 +815,22 @@
     <p><a href="https://kingueletrical.com/">← Back to Main Website: kinguelectrical.com</a></p>
 </footer>
 
+<!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+<a href="https://wa.me/255682843552?text=Hello%20Kingu%20Electrical%2C%20I%20need%20a%20quote%20for%3A" 
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <span class="icon">💬</span>
+    <span class="text">
+        <strong>WhatsApp Enquiry</strong><br>
+        <span class="sub">Click to chat with us</span>
+    </span>
+</a>
+
+<!-- ================= INQUIRY SIDEBAR ================= -->
 <div class="overlay" id="overlay"></div>
 <div class="inquiry-sidebar" id="inquirySidebar">
     <div class="inquiry-header">
         <h3>📋 Your Inquiry Cart</h3>
-        <button id="closeCartBtn" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">✕</button>
+        <button id="closeCartBtn" aria-label="Close">✕</button>
     </div>
     <div class="inquiry-items" id="inquiryItems">
         <p style="text-align: center; padding: 20px;">No items added yet.</p>
@@ -637,194 +844,220 @@
         </div>
     </div>
 </div>
+
+<!-- ================= JAVASCRIPT ================= -->
 <script>
     // ============================================================
-    // COMPLETE PRODUCT DATABASE - TRUNCATED FOR BREVITY BUT WORKING
+    // COMPLETE PRODUCT DATABASE - ALL ORIGINAL PATHS PRESERVED
+    // Added: stock status, priceNum for sorting/VAT calculation
     // ============================================================
     const allProducts = [
         // DSE CONTROLLERS (28 products)
-        { category: "DSE", name: "Deep Sea DSE3110", desc: "Auto start module, basic generator control with alarm monitoring", price: "885,000 TZS", image: "/images/dse/dse3110.png" },
-        { category: "DSE", name: "Deep Sea DSE3110-3", desc: "Auto start with 3-phase monitoring and voltage sensing", price: "825,000 TZS", image: "/images/dse/dse3110-3.jpg" },
-        { category: "DSE", name: "Deep Sea DSE4110", desc: "Auto start with comprehensive alarm monitoring", price: "195,000 TZS", image: "/images/dse/dse4110.jpg" },
-        { category: "DSE", name: "Deep Sea DSE4510", desc: "Automatic mains failure controller, single phase with LCD display", price: "965,000 TZS", image: "/images/dse/dse4510.jpg" },
-        { category: "DSE", name: "Deep Sea DSE4510 MKII", desc: "Automatic mains failure controller, single phase with LCD display", price: "965,000 TZS", image: "/images/dse/dse4510MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSE4520", desc: "ATS controller with remote monitoring and SMS capability", price: "925,000 TZS", image: "/images/dse/dse4520.jpg" },
-        { category: "DSE", name: "Deep Sea DSE4510-3", desc: "3-phase AMF controller with advanced protection", price: "995,000 TZS", image: "/images/dse/dse4510.jpg" },
-        { category: "DSE", name: "Deep Sea DSE5510", desc: "Advanced gen-set controller with LCD and engine monitoring", price: "985,000 TZS", image: "/images/dse/dse5510.jpg" },
-        { category: "DSE", name: "Deep Sea DSE5520", desc: "Remote start with SMS capability and data logging", price: "595,000 TZS", image: "/images/dse/dse5520.jpg" },
-        { category: "DSE", name: "Deep Sea DSE6110", desc: "Gen-set controller, 3-phase monitoring with CAN bus", price: "995,000 TZS", image: "/images/dse/dse6110.jpg" },
-        { category: "DSE", name: "Deep Sea DSE6110 MKII", desc: "Gen-set controller, 3-phase monitoring with CAN bus", price: "995,000 TZS", image: "/images/dse/dse6110MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSE6120", desc: "Advanced controller with load sharing capability", price: "985,000 TZS", image: "/images/dse/dse6120.jpg" },
-        { category: "DSE", name: "Deep Sea DSE6120 MKII", desc: "Advanced controller with load sharing capability", price: "985,000 TZS", image: "/images/dse/dse6120MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSEG8660", desc: "Mains (Utility) Controller", price: "585,000 TZS", image: "/images/dse/DSEG8660.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7210", desc: "Auto start with CAN bus interface and J1939 support", price: "1,585,000 TZS", image: "/images/dse/dse7210.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7220", desc: "Advanced auto start with J1939 and remote monitoring", price: "1,585,000 TZS", image: "/images/dse/dse7220.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7310", desc: "Auto start with remote monitoring and USB interface", price: "1,585,000 TZS", image: "/images/dse/dse7310.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7320", desc: "Color display, advanced controller with graphical interface", price: "1,085,000 TZS", image: "/images/dse/dse7320.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7320 MKII", desc: "Color display, advanced controller with graphical interface", price: "1,385,000 TZS", image: "/images/dse/dse7320MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7420", desc: "High-end controller with Auto Mains (Utility) Failure Control Module", price: "1,995,000 TZS", image: "/images/dse/dse7420.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7410 MKII", desc: "DSE7410 MKII Auto Start Control Module", price: "1,995,000 TZS", image: "/images/dse/dse7410MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSE7420 MKII", desc: "Auto Mains (Utility) Failure Control Module", price: "1,995,000 TZS", image: "/images/dse/dse7420MKII.jpg" },
-        { category: "DSE", name: "Deep Sea DSE8610 MKII", desc: "Color display, multi-language, advanced PLC functionality", price: "1,785,000 TZS", image: "/images/dse/dse8610.jpg" },
-        { category: "DSE", name: "Deep Sea DSE8620 MKII", desc: "Synchronising Auto Mains (Utility) Failure Load Share Control Module", price: "1785,000 TZS", image: "/images/dse/dse8620.jpg" },
-        { category: "DSE", name: "Deep Sea DSE8660 MKII", desc: "Auto Transfer Switch & Mains (Utility) Control Module", price: "1,985,000 TZS", image: "/images/dse/dse8660.jpg" },
-        { category: "DSE", name: "DSE Remote Display Panel", desc: "Remote annunciator for DSE controllers with alarm indication", price: "1,925,000 TZS", image: "/images/dse/remote-panel.jpg" },
-        { category: "DSE", name: "DSE CAN Bus Cable", desc: "CAN bus communication cable for DSE controllers", price: "285,000 TZS", image: "/images/dse/can-cable.jpg" },
-        { category: "DSE", name: "DSE USB Programming Cable", desc: "Programming cable for DSE controllers with driver", price: "95,000 TZS", image: "/images/dse/usb-cable.jpg" },
+        { category: "DSE", name: "Deep Sea DSE3110", desc: "Auto start module, basic generator control with alarm monitoring", price: "885,000", priceNum: 885000, stock: "in-stock", image: "/images/dse/dse3110.png" },
+        { category: "DSE", name: "Deep Sea DSE3110-3", desc: "Auto start with 3-phase monitoring and voltage sensing", price: "825,000", priceNum: 825000, stock: "in-stock", image: "/images/dse/dse3110-3.jpg" },
+        { category: "DSE", name: "Deep Sea DSE4110", desc: "Auto start with comprehensive alarm monitoring", price: "195,000", priceNum: 195000, stock: "in-stock", image: "/images/dse/dse4110.jpg" },
+        { category: "DSE", name: "Deep Sea DSE4510", desc: "Automatic mains failure controller, single phase with LCD display", price: "965,000", priceNum: 965000, stock: "in-stock", image: "/images/dse/dse4510.jpg" },
+        { category: "DSE", name: "Deep Sea DSE4510 MKII", desc: "Automatic mains failure controller, single phase with LCD display", price: "965,000", priceNum: 965000, stock: "low-stock", image: "/images/dse/dse4510MKII.jpg" },
+        { category: "DSE", name: "Deep Sea DSE4520", desc: "ATS controller with remote monitoring and SMS capability", price: "925,000", priceNum: 925000, stock: "in-stock", image: "/images/dse/dse4520.jpg" },
+        { category: "DSE", name: "Deep Sea DSE4510-3", desc: "3-phase AMF controller with advanced protection", price: "995,000", priceNum: 995000, stock: "in-stock", image: "/images/dse/dse4510.jpg" },
+        { category: "DSE", name: "Deep Sea DSE5510", desc: "Advanced gen-set controller with LCD and engine monitoring", price: "985,000", priceNum: 985000, stock: "in-stock", image: "/images/dse/dse5510.jpg" },
+        { category: "DSE", name: "Deep Sea DSE5520", desc: "Remote start with SMS capability and data logging", price: "595,000", priceNum: 595000, stock: "in-stock", image: "/images/dse/dse5520.jpg" },
+        { category: "DSE", name: "Deep Sea DSE6110", desc: "Gen-set controller, 3-phase monitoring with CAN bus", price: "995,000", priceNum: 995000, stock: "in-stock", image: "/images/dse/dse6110.jpg" },
+        { category: "DSE", name: "Deep Sea DSE6110 MKII", desc: "Gen-set controller, 3-phase monitoring with CAN bus", price: "995,000", priceNum: 995000, stock: "in-stock", image: "/images/dse/dse6110MKII.jpg" },
+        { category: "DSE", name: "Deep Sea DSE6120", desc: "Advanced controller with load sharing capability", price: "985,000", priceNum: 985000, stock: "in-stock", image: "/images/dse/dse6120.jpg" },
+        { category: "DSE", name: "Deep Sea DSE6120 MKII", desc: "Advanced controller with load sharing capability", price: "985,000", priceNum: 985000, stock: "low-stock", image: "/images/dse/dse6120MKII.jpg" },
+        { category: "DSE", name: "Deep Sea DSEG8660", desc: "Mains (Utility) Controller", price: "585,000", priceNum: 585000, stock: "in-stock", image: "/images/dse/DSEG8660.jpg" },
+        { category: "DSE", name: "Deep Sea DSE7210", desc: "Auto start with CAN bus interface and J1939 support", price: "1,585,000", priceNum: 1585000, stock: "on-order", image: "/images/dse/dse7210.jpg" },
+        { category: "DSE", name: "Deep Sea DSE7220", desc: "Advanced auto start with J1939 and remote monitoring", price: "1,585,000", priceNum: 1585000, stock: "in-stock", image: "/images/dse/dse7220.jpg" },
+        { category: "DSE", name: "Deep Sea DSE7310", desc: "Auto start with remote monitoring and USB interface", price: "1,585,000", priceNum: 1585000, stock: "in-stock", image: "/images/dse/dse7310.jpg" },
+        { category: "DSE", name: "Deep Sea DSE7320", desc: "Color display, advanced controller with graphical interface", price: "1,085,000", priceNum: 1085000, stock: "in-stock", image: "/images/dse/dse7320.jpg" },
+        { category: "DSE", name: "Deep Sea DSE7320 MKII", desc: "Color display, advanced controller with graphical interface", price: "1,385,000", priceNum: 1385000, stock: "in-stock", image: "/images/dse/dse7320MKII.jpg" },
+        { category: "DSE", name: "Deep Sea DSE7420", desc: "High-end controller with Auto Mains (Utility) Failure Control Module", price: "1,995,000", priceNum: 1995000, stock: "in-stock", image: "/images/dse/dse7420.jpg" },
+        { category: "DSE", name: "Deep Sea DSE7410 MKII", desc: "DSE7410 MKII Auto Start Control Module", price: "1,995,000", priceNum: 1995000, stock: "in-stock", image: "/images/dse/dse7410MKII.jpg" },
+        { category: "DSE", name: "Deep Sea DSE7420 MKII", desc: "Auto Mains (Utility) Failure Control Module", price: "1,995,000", priceNum: 1995000, stock: "in-stock", image: "/images/dse/dse7420MKII.jpg" },
+        { category: "DSE", name: "Deep Sea DSE8610 MKII", desc: "Color display, multi-language, advanced PLC functionality", price: "1,785,000", priceNum: 1785000, stock: "in-stock", image: "/images/dse/dse8610.jpg" },
+        { category: "DSE", name: "Deep Sea DSE8620 MKII", desc: "Synchronising Auto Mains (Utility) Failure Load Share Control Module", price: "1,785,000", priceNum: 1785000, stock: "on-order", image: "/images/dse/dse8620.jpg" },
+        { category: "DSE", name: "Deep Sea DSE8660 MKII", desc: "Auto Transfer Switch & Mains (Utility) Control Module", price: "1,985,000", priceNum: 1985000, stock: "in-stock", image: "/images/dse/dse8660.jpg" },
+        { category: "DSE", name: "DSE Remote Display Panel", desc: "Remote annunciator for DSE controllers with alarm indication", price: "1,925,000", priceNum: 1925000, stock: "in-stock", image: "/images/dse/remote-panel.jpg" },
+        { category: "DSE", name: "DSE CAN Bus Cable", desc: "CAN bus communication cable for DSE controllers", price: "285,000", priceNum: 285000, stock: "in-stock", image: "/images/dse/can-cable.jpg" },
+        { category: "DSE", name: "DSE USB Programming Cable", desc: "Programming cable for DSE controllers with driver", price: "95,000", priceNum: 95000, stock: "in-stock", image: "/images/dse/usb-cable.jpg" },
         
         // CABLES & WIRING
-        { category: "CABLES", name: "0.5 mm Single Core Flexible Cable", desc: "PVC insulated, 99.9% pure copper, 100m roll", price: "39,500 TZS", image: "/images/cables/0.5mm-single-core.jpg" },
-        { category: "CABLES", name: "1.5 mm Single Core Flexible Cable", desc: "PVC insulated, 99.9% pure copper conductor, 100m roll", price: "102,000 TZS", image: "/images/cables/1.5mm-single-core.jpg" },
-        { category: "CABLES", name: "2.5 mm Single Core Cable", desc: "Standard single core for house wiring, 100m roll", price: "155,000 TZS", image: "/images/cables/2.5mm-single-core.jpg" },
-        { category: "CABLES", name: "4 mm Single Core Cable", desc: "Heavy duty single core, 100m roll", price: "235,000 TZS", image: "/images/cables/4mm-single-core.jpg" },
-        { category: "CABLES", name: "6 mm Single Core Cable", desc: "Industrial single core, 100m roll", price: "345,000 TZS", image: "/images/cables/6mm-single-core.jpg" },
-        { category: "CABLES", name: "10mm Single Core Cable", desc: "Heavy duty 10mm single core, 100m roll", price: "535,000 TZS", image: "/images/cables/10mm-single-core.jpg" },
-        { category: "CABLES", name: "16mm Single Core Cable", desc: "Heavy industrial cable, 100m roll", price: "785,000 TZS", image: "/images/cables/16mm-single-core.jpg" },
-        { category: "CABLES", name: "0.5mm 2 Core Flexible Cable", desc: "PVC insulated, 2 core, 99.9% pure copper, 100m roll", price: "98,000 TZS", image: "/images/cables/0.5mm-2core.jpg" },
-        { category: "CABLES", name: "0.5mm 2 Core Twisted Cable", desc: "Red & Black twisted flexible cable, 100m roll", price: "86,000 TZS", image: "/images/cables/0.5mm-2core-twisted.jpg" },
-        { category: "CABLES", name: "1.5mm 2 Core Flexible Cable", desc: "Heavy duty 2 core flexible cable, 100m roll", price: "222,000 TZS", image: "/images/cables/1.5mm-2core.jpg" },
-        { category: "CABLES", name: "2.5mm 2 Core Flexible Cable", desc: "Heavy duty flexible cable, 100m roll", price: "325,000 TZS", image: "/images/cables/2.5mm-2core.jpg" },
-        { category: "CABLES", name: "0.75mm 3 Core Flexible Cable", desc: "3 core with earth, flexible, 100m roll", price: "175,000 TZS", image: "/images/cables/0.75mm-3core.jpg" },
-        { category: "CABLES", name: "1.5mm 3 Core Flexible Cable", desc: "3 core heavy duty flexible, 100m roll", price: "292,000 TZS", image: "/images/cables/1.5mm-3core.jpg" },
-        { category: "CABLES", name: "2.5mm 3 Core Flexible Cable", desc: "3 core industrial flexible, 100m roll", price: "385,000 TZS", image: "/images/cables/2.5mm-3core.jpg" },
-        { category: "CABLES", name: "4mm 3 Core Flexible Cable", desc: "3 phase flexible cable, 100m roll", price: "545,000 TZS", image: "/images/cables/4mm-3core.jpg" },
-        { category: "CABLES", name: "10mm 3 Core Flexible Cable", desc: "Industrial 3 phase flexible, 100m roll", price: "2,103,000 TZS", image: "/images/cables/10mm-3core.jpg" },
-        { category: "CABLES", name: "1.5mm 4 Core Flexible Cable", desc: "4 core power cable, 100m roll", price: "447,000 TZS", image: "/images/cables/1.5mm-4core.jpg" },
-        { category: "CABLES", name: "1.5mm 4 Core Submersible Cable", desc: "Waterproof submersible pump cable, 100m roll", price: "508,000 TZS", image: "/images/cables/submersible-4core.jpg" },
-        { category: "CABLES", name: "2.5mm 4 Core Flexible Cable", desc: "4 core industrial cable, 100m roll", price: "585,000 TZS", image: "/images/cables/2.5mm-4core.jpg" },
-        { category: "CABLES", name: "10mm 4 Core Flexible Cable", desc: "Heavy 4 core industrial, 100m roll", price: "2,632,000 TZS", image: "/images/cables/10mm-4core.jpg" },
-        { category: "CABLES", name: "1.5 mm Flat Twin Cable", desc: "PVC flat twin for surface wiring, 100m roll", price: "250,000 TZS", image: "/images/cables/flat-twin-1.5mm.jpg" },
-        { category: "CABLES", name: "2.5 mm Flat Twin Cable", desc: "Heavy duty flat twin, 100m roll", price: "385,000 TZS", image: "/images/cables/flat-twin-2.5mm.jpg" },
-         { category: "CABLES", name: "Armoured Cable 1.5mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "6,500 TZS", image: "/images/cables/armoured-4mm-4core.jpg" },
-         { category: "CABLES", name: "Armoured Cable 2.5mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "8,500 TZS", image: "/images/cables/armoured-4mm-4core.jpg" },
-         { category: "CABLES", name: "Armoured Cable 4mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "10,500 TZS", image: "/images/cables/armoured-4mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 6mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "14,500 TZS", image: "/images/cables/armoured-4mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 10mm x 4 Core", desc: "Armoured cable for industrial applications", price: "20,500 TZS", image: "/images/cables/armoured-10mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 16mm x 4 Core", desc: "Armoured cable for heavy-duty installations", price: "34,000 TZS", image: "/images/cables/armoured-16mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 25mm x 4 Core", desc: "Armoured cable for main power supply lines", price: "44,000 TZS", image: "/images/cables/armoured-25mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 35mm x 4 Core", desc: "Heavy-duty armoured cable for industrial", price: "58,000 TZS", image: "/images/cables/armoured-35mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 50mm x 4 Core", desc: "Industrial armoured cable", price: "85,000 TZS", image: "/images/cables/armoured-50mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 70mm x 4 Core", desc: "Heavy industrial armoured cable", price: "125,000 TZS", image: "/images/cables/armoured-70mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 95mm x 4 Core", desc: "High capacity armoured cable", price: "165,000 TZS", image: "/images/cables/armoured-95mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 120mm x 4 Core", desc: "Heavy industrial power cable", price: "215,000 TZS", image: "/images/cables/armoured-120mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 150mm x 4 Core", desc: "Industrial main feeder cable", price: "265,000 TZS", image: "/images/cables/armoured-150mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 185mm x 4 Core", desc: "Heavy industrial cable", price: "325,000 TZS", image: "/images/cables/armoured-185mm-4core.jpg" },
-        { category: "CABLES", name: "Armoured Cable 240mm x 4 Core", desc: "Heavy-duty industrial cable", price: "368,000 TZS", image: "/images/cables/armoured-240mm-4core.jpg" },
-        { category: "CABLES", name: "Cable Lug 16mm", desc: "Pure copper cable lug", price: "1,500 TZS", image: "/images/spares/cable-lug-16mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 25mm", desc: "Pure copper cable lug", price: "1,800 TZS", image: "/images/spares/cable-lug-25mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 35mm", desc: "Pure copper cable lug", price: "2,200 TZS", image: "/images/spares/cable-lug-35mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 50mm", desc: "Pure copper cable lug", price: "2,800 TZS", image: "/images/spares/cable-lug-50mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 70mm", desc: "Pure copper cable lug", price: "3,500 TZS", image: "/images/spares/cable-lug-70mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 95mm", desc: "Pure copper cable lug", price: "4,500 TZS", image: "/images/spares/cable-lug-95mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 120mm", desc: "Pure copper cable lug", price: "5,500 TZS", image: "/images/spares/cable-lug-120mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 150mm", desc: "Pure copper cable lug", price: "6,800 TZS", image: "/images/spares/cable-lug-150mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 185mm", desc: "Pure copper cable lug", price: "8,500 TZS", image: "/images/spares/cable-lug-185mm.jpg" },
-        { category: "CABLES", name: "Cable Lug 240mm", desc: "Pure copper cable lug", price: "13,000 TZS", image: "/images/spares/cable-lug-240mm.jpg" },
+        { category: "CABLES", name: "0.5 mm Single Core Flexible Cable", desc: "PVC insulated, 99.9% pure copper, 100m roll", price: "39,500", priceNum: 39500, stock: "in-stock", image: "/images/cables/0.5mm-single-core.jpg" },
+        { category: "CABLES", name: "1.5 mm Single Core Flexible Cable", desc: "PVC insulated, 99.9% pure copper conductor, 100m roll", price: "102,000", priceNum: 102000, stock: "in-stock", image: "/images/cables/1.5mm-single-core.jpg" },
+        { category: "CABLES", name: "2.5 mm Single Core Cable", desc: "Standard single core for house wiring, 100m roll", price: "155,000", priceNum: 155000, stock: "in-stock", image: "/images/cables/2.5mm-single-core.jpg" },
+        { category: "CABLES", name: "4 mm Single Core Cable", desc: "Heavy duty single core, 100m roll", price: "235,000", priceNum: 235000, stock: "in-stock", image: "/images/cables/4mm-single-core.jpg" },
+        { category: "CABLES", name: "6 mm Single Core Cable", desc: "Industrial single core, 100m roll", price: "345,000", priceNum: 345000, stock: "in-stock", image: "/images/cables/6mm-single-core.jpg" },
+        { category: "CABLES", name: "10mm Single Core Cable", desc: "Heavy duty 10mm single core, 100m roll", price: "535,000", priceNum: 535000, stock: "in-stock", image: "/images/cables/10mm-single-core.jpg" },
+        { category: "CABLES", name: "16mm Single Core Cable", desc: "Heavy industrial cable, 100m roll", price: "785,000", priceNum: 785000, stock: "in-stock", image: "/images/cables/16mm-single-core.jpg" },
+        { category: "CABLES", name: "0.5mm 2 Core Flexible Cable", desc: "PVC insulated, 2 core, 99.9% pure copper, 100m roll", price: "98,000", priceNum: 98000, stock: "in-stock", image: "/images/cables/0.5mm-2core.jpg" },
+        { category: "CABLES", name: "0.5mm 2 Core Twisted Cable", desc: "Red & Black twisted flexible cable, 100m roll", price: "86,000", priceNum: 86000, stock: "in-stock", image: "/images/cables/0.5mm-2core-twisted.jpg" },
+        { category: "CABLES", name: "1.5mm 2 Core Flexible Cable", desc: "Heavy duty 2 core flexible cable, 100m roll", price: "222,000", priceNum: 222000, stock: "in-stock", image: "/images/cables/1.5mm-2core.jpg" },
+        { category: "CABLES", name: "2.5mm 2 Core Flexible Cable", desc: "Heavy duty flexible cable, 100m roll", price: "325,000", priceNum: 325000, stock: "in-stock", image: "/images/cables/2.5mm-2core.jpg" },
+        { category: "CABLES", name: "0.75mm 3 Core Flexible Cable", desc: "3 core with earth, flexible, 100m roll", price: "175,000", priceNum: 175000, stock: "in-stock", image: "/images/cables/0.75mm-3core.jpg" },
+        { category: "CABLES", name: "1.5mm 3 Core Flexible Cable", desc: "3 core heavy duty flexible, 100m roll", price: "292,000", priceNum: 292000, stock: "in-stock", image: "/images/cables/1.5mm-3core.jpg" },
+        { category: "CABLES", name: "2.5mm 3 Core Flexible Cable", desc: "3 core industrial flexible, 100m roll", price: "385,000", priceNum: 385000, stock: "in-stock", image: "/images/cables/2.5mm-3core.jpg" },
+        { category: "CABLES", name: "4mm 3 Core Flexible Cable", desc: "3 phase flexible cable, 100m roll", price: "545,000", priceNum: 545000, stock: "in-stock", image: "/images/cables/4mm-3core.jpg" },
+        { category: "CABLES", name: "10mm 3 Core Flexible Cable", desc: "Industrial 3 phase flexible, 100m roll", price: "2,103,000", priceNum: 2103000, stock: "in-stock", image: "/images/cables/10mm-3core.jpg" },
+        { category: "CABLES", name: "1.5mm 4 Core Flexible Cable", desc: "4 core power cable, 100m roll", price: "447,000", priceNum: 447000, stock: "in-stock", image: "/images/cables/1.5mm-4core.jpg" },
+        { category: "CABLES", name: "1.5mm 4 Core Submersible Cable", desc: "Waterproof submersible pump cable, 100m roll", price: "508,000", priceNum: 508000, stock: "in-stock", image: "/images/cables/submersible-4core.jpg" },
+        { category: "CABLES", name: "2.5mm 4 Core Flexible Cable", desc: "4 core industrial cable, 100m roll", price: "585,000", priceNum: 585000, stock: "in-stock", image: "/images/cables/2.5mm-4core.jpg" },
+        { category: "CABLES", name: "10mm 4 Core Flexible Cable", desc: "Heavy 4 core industrial, 100m roll", price: "2,632,000", priceNum: 2632000, stock: "in-stock", image: "/images/cables/10mm-4core.jpg" },
+        { category: "CABLES", name: "1.5 mm Flat Twin Cable", desc: "PVC flat twin for surface wiring, 100m roll", price: "250,000", priceNum: 250000, stock: "in-stock", image: "/images/cables/flat-twin-1.5mm.jpg" },
+        { category: "CABLES", name: "2.5 mm Flat Twin Cable", desc: "Heavy duty flat twin, 100m roll", price: "385,000", priceNum: 385000, stock: "in-stock", image: "/images/cables/flat-twin-2.5mm.jpg" },
+        { category: "CABLES", name: "Armoured Cable 1.5mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "6,500", priceNum: 6500, stock: "in-stock", image: "/images/cables/armoured-4mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 2.5mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "8,500", priceNum: 8500, stock: "in-stock", image: "/images/cables/armoured-4mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 4mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "10,500", priceNum: 10500, stock: "in-stock", image: "/images/cables/armoured-4mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 6mm x 4 Core", desc: "High-quality armoured cable for underground installations", price: "14,500", priceNum: 14500, stock: "in-stock", image: "/images/cables/armoured-4mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 10mm x 4 Core", desc: "Armoured cable for industrial applications", price: "20,500", priceNum: 20500, stock: "in-stock", image: "/images/cables/armoured-10mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 16mm x 4 Core", desc: "Armoured cable for heavy-duty installations", price: "34,000", priceNum: 34000, stock: "in-stock", image: "/images/cables/armoured-16mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 25mm x 4 Core", desc: "Armoured cable for main power supply lines", price: "44,000", priceNum: 44000, stock: "in-stock", image: "/images/cables/armoured-25mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 35mm x 4 Core", desc: "Heavy-duty armoured cable for industrial", price: "58,000", priceNum: 58000, stock: "in-stock", image: "/images/cables/armoured-35mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 50mm x 4 Core", desc: "Industrial armoured cable", price: "85,000", priceNum: 85000, stock: "in-stock", image: "/images/cables/armoured-50mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 70mm x 4 Core", desc: "Heavy industrial armoured cable", price: "125,000", priceNum: 125000, stock: "in-stock", image: "/images/cables/armoured-70mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 95mm x 4 Core", desc: "High capacity armoured cable", price: "165,000", priceNum: 165000, stock: "in-stock", image: "/images/cables/armoured-95mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 120mm x 4 Core", desc: "Heavy industrial power cable", price: "215,000", priceNum: 215000, stock: "in-stock", image: "/images/cables/armoured-120mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 150mm x 4 Core", desc: "Industrial main feeder cable", price: "265,000", priceNum: 265000, stock: "in-stock", image: "/images/cables/armoured-150mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 185mm x 4 Core", desc: "Heavy industrial cable", price: "325,000", priceNum: 325000, stock: "in-stock", image: "/images/cables/armoured-185mm-4core.jpg" },
+        { category: "CABLES", name: "Armoured Cable 240mm x 4 Core", desc: "Heavy-duty industrial cable", price: "368,000", priceNum: 368000, stock: "in-stock", image: "/images/cables/armoured-240mm-4core.jpg" },
+        { category: "CABLES", name: "Cable Lug 16mm", desc: "Pure copper cable lug", price: "1,500", priceNum: 1500, stock: "in-stock", image: "/images/spares/cable-lug-16mm.jpg" },
+        { category: "CABLES", name: "Cable Lug 25mm", desc: "Pure copper cable lug", price: "1,800", priceNum: 1800, stock: "in-stock", image: "/images/spares/cable-lug-25mm.jpg" },
+        { category: "CABLES", name: "Cable Lug 35mm", desc: "Pure copper cable lug", price: "2,200", priceNum: 2200, stock: "in-stock", image: "/images/spares/cable-lug-35mm.jpg" },
+        { category: "CABLES", name: "Cable Lug 50mm", desc: "Pure copper cable lug", price: "2,800", priceNum: 2800, stock: "in-stock", image: "/images/spares/cable-lug-50mm.jpg" },
+        { category: "CABLES", name: "Cable Lug 70mm", desc: "Pure copper cable lug", price: "3,500", priceNum: 3500, stock: "in-stock", image: "/images/spares/cable-lug-70mm.jpg" },
+        { category: "CABLES", name: "Cable Lug 95mm", desc: "Pure copper cable lug", price: "4,500", priceNum: 4500, stock: "in-stock", image: "/images/spares/cable-lug-95mm.jpg" },
+        { category: "CABLES", name: "Cable Lug 120mm", desc: "Pure copper cable lug", price: "5,500", priceNum: 5500, stock: "in-stock", image: "/images/spares/cable-lug-120mm.jpg" },
+        { category: "CABLES", name: "Cable Lug 150mm", desc: "Pure copper cable lug", price: "6,800", priceNum: 6800, stock: "in-stock", image: "/images/spares/cable-lug-150mm.jpg" },
+        { category: "CABLES", name: "Cable Lug 185mm", desc: "Pure copper cable lug", price: "8,500", priceNum: 8500, stock: "in-stock", image: "/images/spares/cable-lug-185mm.jpg" },
+        { category: "CABLES", name: "Cable Lug 240mm", desc: "Pure copper cable lug", price: "13,000", priceNum: 13000, stock: "in-stock", image: "/images/spares/cable-lug-240mm.jpg" },
         
         // SWITCHES
-        { category: "SWITCHES", name: "1 Gang 1 Way Switch Standard", desc: "Standard white switch, smooth edges", price: "3,900 TZS", image: "/images/switches/1gang-1way-white.jpg" },
-        { category: "SWITCHES", name: "1 Gang 2 Way Switch Standard", desc: "2-way switching, white finish", price: "4,500 TZS", image: "/images/switches/1gang-2way-white.jpg" },
-        { category: "SWITCHES", name: "1 Gang 2 Way Switch – Black", desc: "Black finish, modern design", price: "8,000 TZS", image: "/images/switches/1gang-2way-black.jpg" },
-        { category: "SWITCHES", name: "1 Gang 13A Socket with Neon – White", desc: "Power socket with indicator light", price: "8,500 TZS", image: "/images/switches/socket-1gang-white.jpg" },
-        { category: "SWITCHES", name: "1 Gang 13A Socket with Neon – Black", desc: "Power socket with indicator light, black finish", price: "11,000 TZS", image: "/images/switches/socket-1gang-black.jpg" },
-        { category: "SWITCHES", name: "2 Gang 13A Socket", desc: "Double power socket, white finish", price: "12,500 TZS", image: "/images/switches/socket-2gang.jpg" },
-        { category: "SWITCHES", name: "1 Gang 13A Socket with USB", desc: "Power socket with USB charging ports", price: "18,500 TZS", image: "/images/switches/socket-usb.jpg" },
-        { category: "SWITCHES", name: "MCB Schneider 125A 4 Pole", desc: "Schneider Electric MCB C120N 125A 4 pole", price: "92,000 TZS", image: "/images/switches/mcb-schneider-125a.jpg" },
-        { category: "SWITCHES", name: "MCB Schneider 100A 3 Pole", desc: "Schneider MCB C120N 100A 3 pole", price: "69,000 TZS", image: "/images/switches/mcb-schneider-100a-3p.jpg" },
-        { category: "SWITCHES", name: "MCB Schneider 63A 4 Pole", desc: "Schneider MCB 4 pole 63A", price: "26,000 TZS", image: "/images/switches/mcb-schneider-63a.jpg" },
-        { category: "SWITCHES", name: "MCB ABB 4 Pole 32A", desc: "ABB MCB 4 pole 32A circuit breaker", price: "35,000 TZS", image: "/images/switches/mcb-abb-32a.jpg" },
-        { category: "SWITCHES", name: "Change Over Switch 100A", desc: "Manual change over switch for generator and mains", price: "295,000 TZS", image: "/images/switches/changeover-100a.jpg" },
-        { category: "SWITCHES", name: "Automatic Changeover Switch 63A", desc: "Automatic changeover switch 63A three phase", price: "1,050,000 TZS", image: "/images/switches/auto-changeover.jpg" },
-        { category: "SWITCHES", name: "Automatic Changeover Switch 125A", desc: "Automatic changeover switch 125A three phase", price: "1,050,000 TZS", image: "/images/switches/auto-changeover125.jpg" },
-        { category: "SWITCHES", name: "Isolator Switch ABB", desc: "ABB isolator switch for safe electrical isolation", price: "240,000 TZS", image: "/images/switches/isolator-abb.jpg" },
-        { category: "SWITCHES", name: "Motorised Automatic Transfer Change Over Switch 125A Gave Electro", desc: "Motorised Automatic Transfer Change Over Switch 125A", price: "1,050,000 TZS", image: "/images/switches/gave125.jpg" },
-        { category: "SWITCHES", name: "Motorised Automatic Transfer Change Over Switch 63A Gave Electro", desc: "Motorised Automatic Transfer Change Over Switch 63A", price: "1,050,000 TZS", image: "/images/switches/gave63.jpg" },
-        { category: "SWITCHES", name: "Control Box 1HP", desc: "Control box for 1HP water pumps", price: "35,000 TZS", image: "/images/spares/control-box-1hp.jpg" },
-        { category: "SWITCHES", name: "Water Level Controller", desc: "Automatic water level controller", price: "23,000 TZS", image: "/images/spares/water-level-controller.jpg" },
-        { category: "SWITCHES", name: "Timer 24 Hours Theben", desc: "Theben 24-hour timer switch", price: "93,500 TZS", image: "/images/spares/timer-theben.jpg" },
-        { category: "SWITCHES", name: "Photocell Switch", desc: "Automatic photocell for outdoor lighting", price: "12,000 TZS", image: "/images/spares/photocell.jpg" },
+        { category: "SWITCHES", name: "1 Gang 1 Way Switch Standard", desc: "Standard white switch, smooth edges", price: "3,900", priceNum: 3900, stock: "in-stock", image: "/images/switches/1gang-1way-white.jpg" },
+        { category: "SWITCHES", name: "1 Gang 2 Way Switch Standard", desc: "2-way switching, white finish", price: "4,500", priceNum: 4500, stock: "in-stock", image: "/images/switches/1gang-2way-white.jpg" },
+        { category: "SWITCHES", name: "1 Gang 2 Way Switch – Black", desc: "Black finish, modern design", price: "8,000", priceNum: 8000, stock: "in-stock", image: "/images/switches/1gang-2way-black.jpg" },
+        { category: "SWITCHES", name: "1 Gang 13A Socket with Neon – White", desc: "Power socket with indicator light", price: "8,500", priceNum: 8500, stock: "in-stock", image: "/images/switches/socket-1gang-white.jpg" },
+        { category: "SWITCHES", name: "1 Gang 13A Socket with Neon – Black", desc: "Power socket with indicator light, black finish", price: "11,000", priceNum: 11000, stock: "in-stock", image: "/images/switches/socket-1gang-black.jpg" },
+        { category: "SWITCHES", name: "2 Gang 13A Socket", desc: "Double power socket, white finish", price: "12,500", priceNum: 12500, stock: "in-stock", image: "/images/switches/socket-2gang.jpg" },
+        { category: "SWITCHES", name: "1 Gang 13A Socket with USB", desc: "Power socket with USB charging ports", price: "18,500", priceNum: 18500, stock: "in-stock", image: "/images/switches/socket-usb.jpg" },
+        { category: "SWITCHES", name: "MCB Schneider 125A 4 Pole", desc: "Schneider Electric MCB C120N 125A 4 pole", price: "92,000", priceNum: 92000, stock: "in-stock", image: "/images/switches/mcb-schneider-125a.jpg" },
+        { category: "SWITCHES", name: "MCB Schneider 100A 3 Pole", desc: "Schneider MCB C120N 100A 3 pole", price: "69,000", priceNum: 69000, stock: "in-stock", image: "/images/switches/mcb-schneider-100a-3p.jpg" },
+        { category: "SWITCHES", name: "MCB Schneider 63A 4 Pole", desc: "Schneider MCB 4 pole 63A", price: "26,000", priceNum: 26000, stock: "in-stock", image: "/images/switches/mcb-schneider-63a.jpg" },
+        { category: "SWITCHES", name: "MCB ABB 4 Pole 32A", desc: "ABB MCB 4 pole 32A circuit breaker", price: "35,000", priceNum: 35000, stock: "in-stock", image: "/images/switches/mcb-abb-32a.jpg" },
+        { category: "SWITCHES", name: "Change Over Switch 100A", desc: "Manual change over switch for generator and mains", price: "295,000", priceNum: 295000, stock: "in-stock", image: "/images/switches/changeover-100a.jpg" },
+        { category: "SWITCHES", name: "Automatic Changeover Switch 63A", desc: "Automatic changeover switch 63A three phase", price: "1,050,000", priceNum: 1050000, stock: "in-stock", image: "/images/switches/auto-changeover.jpg" },
+        { category: "SWITCHES", name: "Automatic Changeover Switch 125A", desc: "Automatic changeover switch 125A three phase", price: "1,050,000", priceNum: 1050000, stock: "in-stock", image: "/images/switches/auto-changeover125.jpg" },
+        { category: "SWITCHES", name: "Isolator Switch ABB", desc: "ABB isolator switch for safe electrical isolation", price: "240,000", priceNum: 240000, stock: "in-stock", image: "/images/switches/isolator-abb.jpg" },
+        { category: "SWITCHES", name: "Motorised Automatic Transfer Change Over Switch 125A Gave Electro", desc: "Motorised Automatic Transfer Change Over Switch 125A", price: "1,050,000", priceNum: 1050000, stock: "in-stock", image: "/images/switches/gave125.jpg" },
+        { category: "SWITCHES", name: "Motorised Automatic Transfer Change Over Switch 63A Gave Electro", desc: "Motorised Automatic Transfer Change Over Switch 63A", price: "1,050,000", priceNum: 1050000, stock: "in-stock", image: "/images/switches/gave63.jpg" },
+        { category: "SWITCHES", name: "Control Box 1HP", desc: "Control box for 1HP water pumps", price: "35,000", priceNum: 35000, stock: "in-stock", image: "/images/spares/control-box-1hp.jpg" },
+        { category: "SWITCHES", name: "Water Level Controller", desc: "Automatic water level controller", price: "23,000", priceNum: 23000, stock: "in-stock", image: "/images/spares/water-level-controller.jpg" },
+        { category: "SWITCHES", name: "Timer 24 Hours Theben", desc: "Theben 24-hour timer switch", price: "93,500", priceNum: 93500, stock: "in-stock", image: "/images/spares/timer-theben.jpg" },
+        { category: "SWITCHES", name: "Photocell Switch", desc: "Automatic photocell for outdoor lighting", price: "12,000", priceNum: 12000, stock: "in-stock", image: "/images/spares/photocell.jpg" },
         
         // LIGHTING
-        { category: "LIGHTING", name: "10W LED Magnetic Track Light", desc: "Warm white, magnetic track light", price: "55,000 TZS", image: "/images/lighting/magnetic-track-10w.jpg" },
-        { category: "LIGHTING", name: "20W LED Flood Light", desc: "Medium floodlight for outdoor use", price: "18,500 TZS", image: "/images/lighting/floodlight-20w.jpg" },
-        { category: "LIGHTING", name: "50W LED Flood Light", desc: "High-power floodlight for yards", price: "35,000 TZS", image: "/images/lighting/floodlight-50w.jpg" },
-        { category: "LIGHTING", name: "100W LED Flood Light", desc: "High-power floodlight, warm white", price: "68,000 TZS", image: "/images/lighting/floodlight-100w.jpg" },
-        { category: "LIGHTING", name: "100W LED Canopy Light", desc: "Durable outdoor ceiling fixture", price: "410,000 TZS", image: "/images/lighting/canopy-light.jpg" },
-        { category: "LIGHTING", name: "LED Panel Light 60x60cm", desc: "Recessed LED panel for offices", price: "125,000 TZS", image: "/images/lighting/panel-60x60.jpg" },
-        { category: "LIGHTING", name: "LED Downlight 6W", desc: "Recessed downlight, warm white", price: "8,500 TZS", image: "/images/lighting/downlight-6w.jpg" },
-        { category: "LIGHTING", name: "LED Downlight 12W", desc: "Recessed downlight, high lumen", price: "12,500 TZS", image: "/images/lighting/downlight-12w.jpg" },
-        { category: "LIGHTING", name: "LED Bulb 9W", desc: "High brightness LED bulb", price: "5,500 TZS", image: "/images/lighting/bulb-9w.jpg" },
-        { category: "LIGHTING", name: "LED Tube Light 4ft", desc: "T8 LED tube, cool white", price: "12,500 TZS", image: "/images/lighting/tube-4ft.jpg" },
-        { category: "LIGHTING", name: "Solar Street Light 30W", desc: "Complete solar street light with pole", price: "185,000 TZS", image: "/images/lighting/solar-street-30w.jpg" },
-        { category: "LIGHTING", name: "Solar Street Light 60W", desc: "High power solar street light", price: "285,000 TZS", image: "/images/lighting/solar-street-60w.jpg" },
-        { category: "LIGHTING", name: "12-Globe Crystal Pendant Chandelier", desc: "Chrome finish, crystal globes", price: "770,000 TZS", image: "/images/lighting/chandelier-crystal.jpg" },
-        { category: "LIGHTING", name: "12-Globe Modern Pendant Chandelier", desc: "Matte black, opal glass globes", price: "600,000 TZS", image: "/images/lighting/chandelier-modern.jpg" },
+        { category: "LIGHTING", name: "10W LED Magnetic Track Light", desc: "Warm white, magnetic track light", price: "55,000", priceNum: 55000, stock: "in-stock", image: "/images/lighting/magnetic-track-10w.jpg" },
+        { category: "LIGHTING", name: "20W LED Flood Light", desc: "Medium floodlight for outdoor use", price: "18,500", priceNum: 18500, stock: "in-stock", image: "/images/lighting/floodlight-20w.jpg" },
+        { category: "LIGHTING", name: "50W LED Flood Light", desc: "High-power floodlight for yards", price: "35,000", priceNum: 35000, stock: "in-stock", image: "/images/lighting/floodlight-50w.jpg" },
+        { category: "LIGHTING", name: "100W LED Flood Light", desc: "High-power floodlight, warm white", price: "68,000", priceNum: 68000, stock: "in-stock", image: "/images/lighting/floodlight-100w.jpg" },
+        { category: "LIGHTING", name: "100W LED Canopy Light", desc: "Durable outdoor ceiling fixture", price: "410,000", priceNum: 410000, stock: "in-stock", image: "/images/lighting/canopy-light.jpg" },
+        { category: "LIGHTING", name: "LED Panel Light 60x60cm", desc: "Recessed LED panel for offices", price: "125,000", priceNum: 125000, stock: "in-stock", image: "/images/lighting/panel-60x60.jpg" },
+        { category: "LIGHTING", name: "LED Downlight 6W", desc: "Recessed downlight, warm white", price: "8,500", priceNum: 8500, stock: "in-stock", image: "/images/lighting/downlight-6w.jpg" },
+        { category: "LIGHTING", name: "LED Downlight 12W", desc: "Recessed downlight, high lumen", price: "12,500", priceNum: 12500, stock: "in-stock", image: "/images/lighting/downlight-12w.jpg" },
+        { category: "LIGHTING", name: "LED Bulb 9W", desc: "High brightness LED bulb", price: "5,500", priceNum: 5500, stock: "in-stock", image: "/images/lighting/bulb-9w.jpg" },
+        { category: "LIGHTING", name: "LED Tube Light 4ft", desc: "T8 LED tube, cool white", price: "12,500", priceNum: 12500, stock: "in-stock", image: "/images/lighting/tube-4ft.jpg" },
+        { category: "LIGHTING", name: "Solar Street Light 30W", desc: "Complete solar street light with pole", price: "185,000", priceNum: 185000, stock: "in-stock", image: "/images/lighting/solar-street-30w.jpg" },
+        { category: "LIGHTING", name: "Solar Street Light 60W", desc: "High power solar street light", price: "285,000", priceNum: 285000, stock: "in-stock", image: "/images/lighting/solar-street-60w.jpg" },
+        { category: "LIGHTING", name: "12-Globe Crystal Pendant Chandelier", desc: "Chrome finish, crystal globes", price: "770,000", priceNum: 770000, stock: "in-stock", image: "/images/lighting/chandelier-crystal.jpg" },
+        { category: "LIGHTING", name: "12-Globe Modern Pendant Chandelier", desc: "Matte black, opal glass globes", price: "600,000", priceNum: 600000, stock: "in-stock", image: "/images/lighting/chandelier-modern.jpg" },
         
         // MOTOR CONTROLS
-        { category: "MOTORS", name: "1.5HP Control Switch For Pump", desc: "Single phase pump controller with protection", price: "55,000 TZS", image: "/images/motors/pump-control-1.5hp.jpg" },
-        { category: "MOTORS", name: "1.5HP DOL Starter", desc: "Direct-on-line starter for motors", price: "79,000 TZS", image: "/images/motors/dol-starter-1.5hp.jpg" },
-        { category: "MOTORS", name: "3HP DOL Starter", desc: "Direct-on-line starter for 3HP motors", price: "125,000 TZS", image: "/images/motors/dol-starter-3hp.jpg" },
-        { category: "MOTORS", name: "5HP DOL Starter", desc: "Direct-on-line starter for 5HP motors", price: "185,000 TZS", image: "/images/motors/dol-starter-5hp.jpg" },
-        { category: "MOTORS", name: "IC Contactor 125A Schneider", desc: "Schneider IC contactor 125A for motor control", price: "35,000 TZS", image: "/images/motors/contactor-125a.jpg" },
-        { category: "MOTORS", name: "AC Contactor 300A Siemens", desc: "Siemens AC contactor 300A for heavy industrial", price: "550,000 TZS", image: "/images/motors/contactor-300a.jpg" },
-        { category: "MOTORS", name: "AC Contactor Chint NXC-09 20A", desc: "Chint contactor for small motors", price: "17,000 TZS", image: "/images/motors/contactor-chint-20a.jpg" },
-        { category: "MOTORS", name: "AC Contactor Chint NXC-32 50A", desc: "Chint contactor 50A", price: "38,000 TZS", image: "/images/motors/contactor-chint-50a.jpg" },
-        { category: "MOTORS", name: "Soft Starter 15kW", desc: "Soft starter for smooth motor starting", price: "185,000 TZS", image: "/images/motors/soft-starter-15kw.jpg" },
-        { category: "MOTORS", name: "Soft Starter 22kW", desc: "Industrial soft starter", price: "245,000 TZS", image: "/images/motors/soft-starter-22kw.jpg" },
-        { category: "MOTORS", name: "VFD 1.5kW", desc: "Variable frequency drive for motor speed control", price: "185,000 TZS", image: "/images/motors/vfd-1.5kw.jpg" },
-        { category: "MOTORS", name: "VFD 2.2kW", desc: "Variable frequency drive", price: "245,000 TZS", image: "/images/motors/vfd-2.2kw.jpg" },
-        { category: "MOTORS", name: "Motor Circuit Breaker GV2 9-14A", desc: "Schneider GV2 motor circuit breaker", price: "65,000 TZS", image: "/images/motors/gv2-breaker.jpg" },
+        { category: "MOTORS", name: "1.5HP Control Switch For Pump", desc: "Single phase pump controller with protection", price: "55,000", priceNum: 55000, stock: "in-stock", image: "/images/motors/pump-control-1.5hp.jpg" },
+        { category: "MOTORS", name: "1.5HP DOL Starter", desc: "Direct-on-line starter for motors", price: "79,000", priceNum: 79000, stock: "in-stock", image: "/images/motors/dol-starter-1.5hp.jpg" },
+        { category: "MOTORS", name: "3HP DOL Starter", desc: "Direct-on-line starter for 3HP motors", price: "125,000", priceNum: 125000, stock: "in-stock", image: "/images/motors/dol-starter-3hp.jpg" },
+        { category: "MOTORS", name: "5HP DOL Starter", desc: "Direct-on-line starter for 5HP motors", price: "185,000", priceNum: 185000, stock: "in-stock", image: "/images/motors/dol-starter-5hp.jpg" },
+        { category: "MOTORS", name: "IC Contactor 125A Schneider", desc: "Schneider IC contactor 125A for motor control", price: "35,000", priceNum: 35000, stock: "in-stock", image: "/images/motors/contactor-125a.jpg" },
+        { category: "MOTORS", name: "AC Contactor 300A Siemens", desc: "Siemens AC contactor 300A for heavy industrial", price: "550,000", priceNum: 550000, stock: "in-stock", image: "/images/motors/contactor-300a.jpg" },
+        { category: "MOTORS", name: "AC Contactor Chint NXC-09 20A", desc: "Chint contactor for small motors", price: "17,000", priceNum: 17000, stock: "in-stock", image: "/images/motors/contactor-chint-20a.jpg" },
+        { category: "MOTORS", name: "AC Contactor Chint NXC-32 50A", desc: "Chint contactor 50A", price: "38,000", priceNum: 38000, stock: "in-stock", image: "/images/motors/contactor-chint-50a.jpg" },
+        { category: "MOTORS", name: "Soft Starter 15kW", desc: "Soft starter for smooth motor starting", price: "185,000", priceNum: 185000, stock: "in-stock", image: "/images/motors/soft-starter-15kw.jpg" },
+        { category: "MOTORS", name: "Soft Starter 22kW", desc: "Industrial soft starter", price: "245,000", priceNum: 245000, stock: "in-stock", image: "/images/motors/soft-starter-22kw.jpg" },
+        { category: "MOTORS", name: "VFD 1.5kW", desc: "Variable frequency drive for motor speed control", price: "185,000", priceNum: 185000, stock: "in-stock", image: "/images/motors/vfd-1.5kw.jpg" },
+        { category: "MOTORS", name: "VFD 2.2kW", desc: "Variable frequency drive", price: "245,000", priceNum: 245000, stock: "in-stock", image: "/images/motors/vfd-2.2kw.jpg" },
+        { category: "MOTORS", name: "Motor Circuit Breaker GV2 9-14A", desc: "Schneider GV2 motor circuit breaker", price: "65,000", priceNum: 65000, stock: "in-stock", image: "/images/motors/gv2-breaker.jpg" },
         
         // YANMAR SPARES
-        { category: "YANMAR", name: "Yanmar 3TN Piston Ring Set", desc: "Complete piston rings for 3TN series", price: "225,000 TZS", image: "/images/yanmar/3tn-piston-ring.jpg" },
-        { category: "YANMAR", name: "Yanmar 3TN Cylinder Liner", desc: "Cast iron cylinder liner", price: "415,000 TZS", image: "/images/yanmar/3tn-cylinder-liner.jpg" },
-        { category: "YANMAR", name: "Yanmar 4TN Piston Kit", desc: "Complete piston with rings", price: "385,000 TZS", image: "/images/yanmar/4tn-piston-kit.jpg" },
-        { category: "YANMAR", name: "Yanmar 4TN Cylinder Liner Kit", desc: "Wet cylinder liner with O-rings", price: "325,000 TZS", image: "/images/yanmar/4tn-cylinder-liner.jpg" },
-        { category: "YANMAR", name: "Yanmar 3TN,4TN Complete Overhaul kit", desc: "Complete overhaul kit set", price: "825,000 TZS", image: "/images/yanmar/overhaul.jpg" },
-        { category: "YANMAR", name: "Yanmar Fuel Injector Nozzle", desc: "Genuine injector nozzle", price: "165,000 TZS", image: "/images/yanmar/injector-nozzle.jpg" },
-        { category: "YANMAR", name: "Yanmar Oil Filter", desc: "Genuine oil filter", price: "40,500 TZS", image: "/images/yanmar/oil-filter.jpg" },
-        { category: "YANMAR", name: "Yanmar Fuel Filter", desc: "Fuel filter/water separator", price: "40,500 TZS", image: "/images/yanmar/fuel-filter.jpg" },
-        { category: "YANMAR", name: "Yanmar Water Pump Assembly", desc: "Complete water pump", price: "385,000 TZS", image: "/images/yanmar/water-pump.jpg" },
-        { category: "YANMAR", name: "Yanmar Turbocharger", desc: "Complete turbo assembly", price: "1,785,000 TZS", image: "/images/yanmar/turbocharger.jpg" },
-        { category: "YANMAR", name: "Yanmar Crankshaft", desc: "Balanced crankshaft", price: "1,550,000 TZS", image: "/images/yanmar/crankshaft.jpg" },
-        { category: "YANMAR", name: "Yanmar Gasket Kit", desc: "Complete overhaul gasket kit", price: "205,000 TZS", image: "/images/yanmar/gasket-kit.jpg" },
+        { category: "YANMAR", name: "Yanmar 3TN Piston Ring Set", desc: "Complete piston rings for 3TN series", price: "225,000", priceNum: 225000, stock: "in-stock", image: "/images/yanmar/3tn-piston-ring.jpg" },
+        { category: "YANMAR", name: "Yanmar 3TN Cylinder Liner", desc: "Cast iron cylinder liner", price: "415,000", priceNum: 415000, stock: "in-stock", image: "/images/yanmar/3tn-cylinder-liner.jpg" },
+        { category: "YANMAR", name: "Yanmar 4TN Piston Kit", desc: "Complete piston with rings", price: "385,000", priceNum: 385000, stock: "in-stock", image: "/images/yanmar/4tn-piston-kit.jpg" },
+        { category: "YANMAR", name: "Yanmar 4TN Cylinder Liner Kit", desc: "Wet cylinder liner with O-rings", price: "325,000", priceNum: 325000, stock: "in-stock", image: "/images/yanmar/4tn-cylinder-liner.jpg" },
+        { category: "YANMAR", name: "Yanmar 3TN,4TN Complete Overhaul kit", desc: "Complete overhaul kit set", price: "825,000", priceNum: 825000, stock: "in-stock", image: "/images/yanmar/overhaul.jpg" },
+        { category: "YANMAR", name: "Yanmar Fuel Injector Nozzle", desc: "Genuine injector nozzle", price: "165,000", priceNum: 165000, stock: "in-stock", image: "/images/yanmar/injector-nozzle.jpg" },
+        { category: "YANMAR", name: "Yanmar Oil Filter", desc: "Genuine oil filter", price: "40,500", priceNum: 40500, stock: "in-stock", image: "/images/yanmar/oil-filter.jpg" },
+        { category: "YANMAR", name: "Yanmar Fuel Filter", desc: "Fuel filter/water separator", price: "40,500", priceNum: 40500, stock: "in-stock", image: "/images/yanmar/fuel-filter.jpg" },
+        { category: "YANMAR", name: "Yanmar Water Pump Assembly", desc: "Complete water pump", price: "385,000", priceNum: 385000, stock: "in-stock", image: "/images/yanmar/water-pump.jpg" },
+        { category: "YANMAR", name: "Yanmar Turbocharger", desc: "Complete turbo assembly", price: "1,785,000", priceNum: 1785000, stock: "on-order", image: "/images/yanmar/turbocharger.jpg" },
+        { category: "YANMAR", name: "Yanmar Crankshaft", desc: "Balanced crankshaft", price: "1,550,000", priceNum: 1550000, stock: "in-stock", image: "/images/yanmar/crankshaft.jpg" },
+        { category: "YANMAR", name: "Yanmar Gasket Kit", desc: "Complete overhaul gasket kit", price: "205,000", priceNum: 205000, stock: "in-stock", image: "/images/yanmar/gasket-kit.jpg" },
         
         // PERKINS SPARES
-        { category: "PERKINS", name: "Perkins 1104 Piston Kit", desc: "Complete piston with rings", price: "385,000 TZS", image: "/images/perkins/1104-piston-kit.jpg" },
-        { category: "PERKINS", name: "Perkins 1104 Cylinder Liner", desc: "Wet cylinder liner kit", price: "245,000 TZS", image: "/images/perkins/1104-cylinder-liner.png" },
-        { category: "PERKINS", name: "Perkins 1104 Connecting Rod", desc: "Forged connecting rod", price: "285,000 TZS", image: "/images/perkins/1104-connecting-rod.jpg" },
-        { category: "PERKINS", name: "Perkins 1104 Gasket Kit", desc: "Complete overhaul gasket set", price: "255,000 TZS", image: "/images/perkins/1104-gasket-kit.jpg" },
-        { category: "PERKINS", name: "Perkins Fuel Injector", desc: "Complete injector assembly", price: "285,000 TZS", image: "/images/perkins/fuel-injector.jpg" },
-        { category: "PERKINS", name: "Perkins Turbocharger", desc: "Complete turbo assembly", price: "485,000 TZS", image: "/images/perkins/Perkin-turbocharger.jpg" },
-        { category: "PERKINS", name: "Perkins Crankshaft", desc: "Precision ground crankshaft", price: "595,000 TZS", image: "/images/perkins/Perkin-crankshaft.jpg" },
-        { category: "PERKINS", name: "Perkins Oil Filter", desc: "Genuine oil filter", price: "40,500 TZS", image: "/images/perkins/perkin-oil-filter.jpg" },
-        { category: "PERKINS", name: "Perkins Water Pump", desc: "Circulating water pump", price: "245,000 TZS", image: "/images/perkins/perkins-water-pump.jpg" },
+        { category: "PERKINS", name: "Perkins 1104 Piston Kit", desc: "Complete piston with rings", price: "385,000", priceNum: 385000, stock: "low-stock", image: "/images/perkins/1104-piston-kit.jpg" },
+        { category: "PERKINS", name: "Perkins 1104 Cylinder Liner", desc: "Wet cylinder liner kit", price: "245,000", priceNum: 245000, stock: "in-stock", image: "/images/perkins/1104-cylinder-liner.png" },
+        { category: "PERKINS", name: "Perkins 1104 Connecting Rod", desc: "Forged connecting rod", price: "285,000", priceNum: 285000, stock: "in-stock", image: "/images/perkins/1104-connecting-rod.jpg" },
+        { category: "PERKINS", name: "Perkins 1104 Gasket Kit", desc: "Complete overhaul gasket set", price: "255,000", priceNum: 255000, stock: "in-stock", image: "/images/perkins/1104-gasket-kit.jpg" },
+        { category: "PERKINS", name: "Perkins Fuel Injector", desc: "Complete injector assembly", price: "285,000", priceNum: 285000, stock: "in-stock", image: "/images/perkins/fuel-injector.jpg" },
+        { category: "PERKINS", name: "Perkins Turbocharger", desc: "Complete turbo assembly", price: "485,000", priceNum: 485000, stock: "in-stock", image: "/images/perkins/Perkin-turbocharger.jpg" },
+        { category: "PERKINS", name: "Perkins Crankshaft", desc: "Precision ground crankshaft", price: "595,000", priceNum: 595000, stock: "in-stock", image: "/images/perkins/Perkin-crankshaft.jpg" },
+        { category: "PERKINS", name: "Perkins Oil Filter", desc: "Genuine oil filter", price: "40,500", priceNum: 40500, stock: "in-stock", image: "/images/perkins/perkin-oil-filter.jpg" },
+        { category: "PERKINS", name: "Perkins Water Pump", desc: "Circulating water pump", price: "245,000", priceNum: 245000, stock: "in-stock", image: "/images/perkins/perkins-water-pump.jpg" },
         
         // GENERATORS
-        { category: "GENERATORS", name: "10kVA Diesel Generator", desc: "Portable diesel generator with ATS panel", price: "5,200,000 TZS", image: "/images/generators/generator.png" },
-        { category: "GENERATORS", name: "15kVA Home Generator", desc: "Residential generator with automatic transfer switch", price: "14,800,000 TZS", image: "/images/generators/generator.png" },
-        { category: "GENERATORS", name: "25kVA Standby Generator", desc: "Commercial generator with auto start", price: "27,200,000 TZS", image: "/images/generators/generator.png" },
-        { category: "GENERATORS", name: "50kVA Silent Generator", desc: "Super silent generator for residential areas", price: "52,500,000 TZS", image: "/images/generators/generator.png" },
-        { category: "GENERATORS", name: "100kVA Diesel Generator", desc: "Complete generator set with ATS", price: "125,500,000 TZS", image: "/images/generators/generator.png" },
-        { category: "GENERATORS", name: "Generator ATS Panel", desc: "Automatic transfer switch panel", price: "450,000 TZS", image: "/images/generators/ats-panel.png" },
-        { category: "GENERATORS", name: "Generator Control Panel", desc: "Remote monitoring panel", price: "285,000 TZS", image: "/images/generators/control-panel.jpg" },
+        { category: "GENERATORS", name: "10kVA Diesel Generator", desc: "Portable diesel generator with ATS panel", price: "5,200,000", priceNum: 5200000, stock: "on-order", image: "/images/generators/generator.png" },
+        { category: "GENERATORS", name: "15kVA Home Generator", desc: "Residential generator with automatic transfer switch", price: "14,800,000", priceNum: 14800000, stock: "in-stock", image: "/images/generators/generator.png" },
+        { category: "GENERATORS", name: "25kVA Standby Generator", desc: "Commercial generator with auto start", price: "27,200,000", priceNum: 27200000, stock: "in-stock", image: "/images/generators/generator.png" },
+        { category: "GENERATORS", name: "50kVA Silent Generator", desc: "Super silent generator for residential areas", price: "52,500,000", priceNum: 52500000, stock: "in-stock", image: "/images/generators/generator.png" },
+        { category: "GENERATORS", name: "100kVA Diesel Generator", desc: "Complete generator set with ATS", price: "125,500,000", priceNum: 125500000, stock: "in-stock", image: "/images/generators/generator.png" },
+        { category: "GENERATORS", name: "Generator ATS Panel", desc: "Automatic transfer switch panel", price: "450,000", priceNum: 450000, stock: "in-stock", image: "/images/generators/ats-panel.png" },
+        { category: "GENERATORS", name: "Generator Control Panel", desc: "Remote monitoring panel", price: "285,000", priceNum: 285000, stock: "in-stock", image: "/images/generators/control-panel.jpg" },
         
         // TOOLS
-        { category: "TOOLS", name: "Clamp Meter Fluke 325", desc: "Fluke professional clamp meter", price: "2,080,000 TZS", image: "/images/tools/fluke-325.jpg" },
-        { category: "TOOLS", name: "Clamp Meter UNI-T UT205", desc: "UNI-T professional clamp meter", price: "205,000 TZS", image: "/images/tools/uni-t-ut205.jpg" },
-        { category: "TOOLS", name: "Multimeter UNI-T UT39C+", desc: "Digital multimeter", price: "170,000 TZS", image: "/images/tools/uni-t-ut39c.jpg" },
-        { category: "TOOLS", name: "Hydraulic Crimping Tool YKK 240", desc: "Hydraulic crimping tool", price: "450,000 TZS", image: "/images/tools/crimping-tool.jpg" },
+        { category: "TOOLS", name: "Clamp Meter Fluke 325", desc: "Fluke professional clamp meter", price: "2,080,000", priceNum: 2080000, stock: "in-stock", image: "/images/tools/fluke-325.jpg" },
+        { category: "TOOLS", name: "Clamp Meter UNI-T UT205", desc: "UNI-T professional clamp meter", price: "205,000", priceNum: 205000, stock: "in-stock", image: "/images/tools/uni-t-ut205.jpg" },
+        { category: "TOOLS", name: "Multimeter UNI-T UT39C+", desc: "Digital multimeter", price: "170,000", priceNum: 170000, stock: "in-stock", image: "/images/tools/uni-t-ut39c.jpg" },
+        { category: "TOOLS", name: "Hydraulic Crimping Tool YKK 240", desc: "Hydraulic crimping tool", price: "450,000", priceNum: 450000, stock: "in-stock", image: "/images/tools/crimping-tool.jpg" },
         
         // OTHER SPARES
-        { category: "SPARES", name: "AVR SX460A", desc: "Automatic Voltage Regulator", price: "650,000 TZS", image: "/images/spares/avr-sx460a.jpg" },
-        { category: "SPARES", name: "Surge Protective Device ABB", desc: "ABB surge protector DC", price: "492,000 TZS", image: "/images/spares/surge-abb.jpg" },
-        { category: "SPARES", name: "Cable Tray 50x50mm", desc: "Galvanized cable tray", price: "47,000 TZS", image: "/images/spares/cable-tray.jpg" },
-        { category: "SPARES", name: "Step Up Down Transformer 750W", desc: "Voltage converter", price: "358,000 TZS", image: "/images/spares/transformer-750w.jpg" },
-        { category: "SPARES", name: "Submersible Water Pump 0.9HP", desc: "Complete submersible pump", price: "350,000 TZS", image: "/images/spares/pump.jpg" },
-        { category: "SPARES", name: "Submersible Water Pump 3HP", desc: "Submersible pump for deep wells", price: "600,000 TZS", image: "/images/spares/pump.jpg" }
+        { category: "SPARES", name: "AVR SX460A", desc: "Automatic Voltage Regulator", price: "650,000", priceNum: 650000, stock: "in-stock", image: "/images/spares/avr-sx460a.jpg" },
+        { category: "SPARES", name: "Surge Protective Device ABB", desc: "ABB surge protector DC", price: "492,000", priceNum: 492000, stock: "in-stock", image: "/images/spares/surge-abb.jpg" },
+        { category: "SPARES", name: "Cable Tray 50x50mm", desc: "Galvanized cable tray", price: "47,000", priceNum: 47000, stock: "in-stock", image: "/images/spares/cable-tray.jpg" },
+        { category: "SPARES", name: "Step Up Down Transformer 750W", desc: "Voltage converter", price: "358,000", priceNum: 358000, stock: "in-stock", image: "/images/spares/transformer-750w.jpg" },
+        { category: "SPARES", name: "Submersible Water Pump 0.9HP", desc: "Complete submersible pump", price: "350,000", priceNum: 350000, stock: "out-of-stock", image: "/images/spares/pump.jpg" },
+        { category: "SPARES", name: "Submersible Water Pump 3HP", desc: "Submersible pump for deep wells", price: "600,000", priceNum: 600000, stock: "in-stock", image: "/images/spares/pump.jpg" }
     ];
 
+    // ============================================================
+    // CART & UI LOGIC
+    // ============================================================
     let cart = [];
+    let currentSort = "default";
+
+    const stockLabels = {
+        'in-stock': { label: '✓ In Stock', class: 'in-stock' },
+        'low-stock': { label: '⚠️ Low Stock', class: 'low-stock' },
+        'out-of-stock': { label: '✕ Out of Stock', class: 'out-of-stock' },
+        'on-order': { label: '📦 On Order', class: 'on-order' }
+    };
+
+    function formatPrice(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    function sortProducts(products, sortType) {
+        const sorted = [...products];
+        if (sortType === "price-low") sorted.sort((a,b) => a.priceNum - b.priceNum);
+        else if (sortType === "price-high") sorted.sort((a,b) => b.priceNum - a.priceNum);
+        else if (sortType === "name") sorted.sort((a,b) => a.name.localeCompare(b.name));
+        return sorted;
+    }
 
     function renderProducts() {
         const searchTerm = document.getElementById('searchInput').value.toLowerCase();
@@ -836,6 +1069,8 @@
             return matchesSearch && matchesCategory;
         });
         
+        filtered = sortProducts(filtered, currentSort);
+        
         const grid = document.getElementById('productsGrid');
         document.getElementById('productCount').innerText = `${filtered.length} products found`;
         
@@ -844,7 +1079,13 @@
             return;
         }
         
-        grid.innerHTML = filtered.map(product => `
+        grid.innerHTML = filtered.map(product => {
+            const stockInfo = stockLabels[product.stock] || stockLabels['in-stock'];
+            const priceExVAT = product.priceNum;
+            const priceIncVAT = Math.round(priceExVAT * 1.18);
+            const isOutOfStock = product.stock === 'out-of-stock';
+            
+            return `
             <div class="product-card">
                 <div class="product-image">
                     <img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'">
@@ -853,14 +1094,25 @@
                     <div class="product-category">${product.category}</div>
                     <div class="product-title">${product.name}</div>
                     <div class="product-description">${product.desc}</div>
-                    <div class="product-price">${product.price}</div>
+                    <div class="product-meta">
+                        <span class="stock-badge ${stockInfo.class}">${stockInfo.label}</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="product-price">${formatPrice(priceExVAT)} TZS</span>
+                        <span class="price-vat-note">(+18% VAT = ${formatPrice(priceIncVAT)} TZS incl.)</span>
+                    </div>
                 </div>
                 <div class="product-actions">
-                    <button class="btn-add" onclick="addToCart('${product.name.replace(/'/g, "\\'")}', '${product.price}')">Add to Inquiry</button>
+                    <button class="btn-add" onclick="addToCart('${product.name.replace(/'/g, "\\'")}', '${formatPrice(priceExVAT)} TZS')" ${isOutOfStock ? 'disabled' : ''}>
+                        ${isOutOfStock ? 'Out of Stock' : 'Add to Inquiry'}
+                    </button>
+                    <button class="btn-whatsapp-product" onclick="whatsAppProduct('${product.name.replace(/'/g, "\\'")}', '${formatPrice(priceExVAT)} TZS')">
+                        💬 WhatsApp
+                    </button>
                     <button class="btn-inquire" onclick="quickInquire('${product.name.replace(/'/g, "\\'")}')">Quick Call</button>
                 </div>
             </div>
-        `).join('');
+        `}).join('');
     }
     
     function addToCart(name, price) {
@@ -896,7 +1148,14 @@
         document.getElementById('openCartBtn').click();
     }
     
-    // Event Listeners
+    function whatsAppProduct(name, price) {
+        const message = `Hello Kingu Electrical, I'm interested in:\n\n*${name}*\nPrice: ${price} (VAT exclusive)\n\nPlease confirm availability and delivery options.`;
+        window.open(`https://wa.me/255682843552?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // ============================================================
+    // EVENT LISTENERS
+    // ============================================================
     document.getElementById('searchBtn').addEventListener('click', renderProducts);
     document.getElementById('searchInput').addEventListener('keyup', (e) => {
         if (e.key === 'Enter') renderProducts();
@@ -908,6 +1167,20 @@
             btn.classList.add('active');
             renderProducts();
         });
+    });
+    
+    document.getElementById('clearFiltersBtn').addEventListener('click', () => {
+        document.getElementById('searchInput').value = '';
+        document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+        document.querySelector('.filter-chip[data-category="all"]').classList.add('active');
+        document.getElementById('sortSelect').value = 'default';
+        currentSort = 'default';
+        renderProducts();
+    });
+    
+    document.getElementById('sortSelect').addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        renderProducts();
     });
     
     document.getElementById('openCartBtn').addEventListener('click', () => {
@@ -938,7 +1211,7 @@
         const items = cart.map(i => `${i.name} (${i.price})`).join('\n');
         const message = `New Inquiry from ${name} (${phone})\n\nProducts:\n${items}\n\nNotes: ${notes}`;
         
-        window.location.href = `https://wa.me/255682843552?text=${encodeURIComponent(message)}`;
+        window.open(`https://wa.me/255682843552?text=${encodeURIComponent(message)}`, '_blank');
         
         alert('Inquiry sent! We will call you within 30 minutes.');
         cart = [];
@@ -954,4 +1227,3 @@
 </script>
 </body>
 </html>
-
